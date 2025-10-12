@@ -2,18 +2,6 @@
 export type Social = { name: string; href: string; icon: string };
 export type NavItem = { label: string; href: string };
 
-// ==== Site-wide Config ====
-export const site = {
-  name: "Baek Sejin",
-  domain: "sejin.dev",
-  author: "Baek Sejin",
-  year: new Date().getFullYear(),
-  meta: {
-    title: "BAEK SEJIN",
-    description: "Portfolio of Baek Sejin",
-  },
-} as const;
-
 // ==== Contact Config ====
 export const contact = {
   email: "sejin9767@gmail.com",

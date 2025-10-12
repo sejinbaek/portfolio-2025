@@ -4,7 +4,7 @@ import { contact } from "../app/config/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-neutral-300">
+    <footer className="bg-neutral-900 text-white">
       <div className="mx-auto w-full max-w-screen-2xl">
         <div className="pt-8 pb-10 md:pt-10 md:pb-24 flex flex-col gap-1 lg:gap-4">
           <div className="overflow-hidden pb-2">
