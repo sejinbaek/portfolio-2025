@@ -44,8 +44,8 @@ export default function ContactForm() {
             id="message"
             name="message"
             required
-            className="w-full h-24 rounded-lg bg-white border border-neutral-200 p-3
-                 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+            className="w-full h-24 rounded-lg bg-white border border-neutral-200 p-3 resize-none
+                 focus:outline-none focus:border-neutral-800"
           />
         </div>
 

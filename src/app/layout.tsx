@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="" className={`${pretendard.variable}`}>
+    <html lang="kr" className={`${pretendard.variable}`}>
       <body className={pretendard.className}>
         <Header />
         <div
