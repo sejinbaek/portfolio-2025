@@ -12,7 +12,6 @@ export default function SocialLinks({ items }: { items: Social[] }) {
           aria-label={s.name}
           target="_blank"
           rel="noreferrer"
-          className="hover:bg-neutral-100"
         >
           <Image
             src={s.icon}
