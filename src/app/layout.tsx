@@ -26,8 +26,6 @@ export default function RootLayout({
     <html lang="" className={`${pretendard.variable}`}>
       <body className={pretendard.className}>
         <Header />
-
-        {/* ✅ 전역 컨테이너: 모바일 좌우 여백, 큰 화면은 축소/중앙정렬 */}
         <div
           className="mx-auto w-full max-w-screen-lg px-5 md:px-6"
           style={{
