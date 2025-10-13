@@ -51,7 +51,9 @@ export default function Footer() {
         <div className="px-4 sm:px-6 lg:px-10 py-4 flex flex-col gap-4 md:gap-0 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-2 justify-center md:justify-start">
             <Image src="/favicon.ico" alt="" width={20} height={20} />
-            <span className="text-sm text-neutral-200">Baek Sejin</span>
+            <span className="text-xs lg:text-base text-neutral-200">
+              Baek Sejin
+            </span>
           </div>
 
           <p className="text-xs lg:text-base text-neutral-400 text-center md:text-left">

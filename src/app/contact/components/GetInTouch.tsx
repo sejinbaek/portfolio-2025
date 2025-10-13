@@ -15,20 +15,27 @@ export default function GetInTouch({
 }: Props) {
   return (
     <section
-      className={`flex flex-col items-center text-center gap-4 ${className}`}
+      className={`flex flex-col items-center text-center gap-4 md:gap-8 lg:gap-10 ${className}`}
     >
-      <h3 className="text-xl font-semibold min-[400px]:text-2xl">{title}</h3>
+      <h3 className="text-xl font-semibold min-[400px]:text-2xl md:text-3xl lg:text-4xl">
+        {title}
+      </h3>
 
       <div className="space-y-1">
-        <p className="text-base min-[400px]:text-xl text-neutral-500">Email:</p>
-        <a href={`mailto:${email}`} className="text-base min-[400px]:text-xl">
+        <p className="text-base min-[400px]:text-xl md:text-2xl text-neutral-400">
+          Email
+        </p>
+        <a
+          href={`mailto:${email}`}
+          className="text-base min-[400px]:text-xl md:text-2xl text-neutral-800"
+        >
           {email}
         </a>
       </div>
 
       {contact.socialsDark.length > 0 && (
-        <div className="space-y-2">
-          <p className="text-base min-[400px]:text-xl text-neutral-500">
+        <div className="space-y-2 md:space-y-3">
+          <p className="text-base min-[400px]:text-xl md:text-2xl text-neutral-400">
             Follow Me
           </p>
           <SocialLinks items={contact.socialsDark} />

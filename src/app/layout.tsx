@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ClientToaster from "../components/ClientToaster";
 
 const pretendard = localFont({
   src: "../assets/fonts/PretendardVariable.woff2",
@@ -26,6 +27,8 @@ export default function RootLayout({
     <html lang="kr" className={`${pretendard.variable}`}>
       <body className={pretendard.className}>
         <Header />
+        {/* toast */}
+        <ClientToaster />
         <div
           className="mx-auto w-full max-w-screen-lg px-5 md:px-6"
           style={{

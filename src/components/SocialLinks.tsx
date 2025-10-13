@@ -2,7 +2,11 @@ import Image from "next/image";
 
 export type Social = { name: string; href: string; icon: string };
 
-export default function SocialLinks({ items }: { items: Social[] }) {
+type Props = {
+  items: Social[];
+};
+
+export default function SocialLinks({ items }: Props) {
   return (
     <div className="flex items-center justify-center gap-3">
       {items.map((s) => (
@@ -18,7 +22,7 @@ export default function SocialLinks({ items }: { items: Social[] }) {
             alt=""
             width={50}
             height={50}
-            className="w-6 h-6 min-[400px]:w-7 min-[400px]:h-7"
+            className="w-6 h-6 min-[400px]:w-7 min-[400px]:h-7 lg:w-8 lg:h-8"
           />
         </a>
       ))}

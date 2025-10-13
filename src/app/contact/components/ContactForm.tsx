@@ -1,15 +1,38 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { Toaster, toast } from "sonner";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID!);
-  if (state.succeeded)
-    return <p className="text-green-600">Thanks! I’ll reply soon.</p>;
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("소중한 의견을 보내주셔서 감사합니다!", {
+        style: {
+          background: "#262626",
+          color: "#fff",
+          fontSize: "14px",
+        },
+      });
+    }
+  }, [state.succeeded]);
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    await handleSubmit(e);
+    formRef.current?.reset();
+  };
 
   return (
-    <div className="max-w-sm rounded-2xl bg-neutral-100 p-7">
-      <form onSubmit={handleSubmit} className="space-y-5">
+    <div className="w-full md:w-96 lg:w-128 rounded-2xl bg-neutral-100 p-7">
+      <form
+        onSubmit={onSubmit}
+        ref={formRef}
+        className="space-y-5 md:space-y-7 lg:space-y-9"
+      >
         <label className="sr-only" htmlFor="name">
           Name
         </label>
@@ -18,7 +41,7 @@ export default function ContactForm() {
           name="name"
           placeholder="Your name"
           required
-          className="font-light w-full bg-transparent text-sm min-[400px]:text-base placeholder:text-neutral-400 border-0 border-b outline-none focus:outline-none border-neutral-300 focus:border-neutral-700 focus:ring-0"
+          className="font-light w-full bg-transparent text-sm min-[400px]:text-base lg:text-xl placeholder:text-neutral-400 border-0 border-b outline-none focus:outline-none focus:border-b-2 border-neutral-300 focus:border-neutral-700 focus:ring-0"
         />
 
         <label className="sr-only" htmlFor="email">
@@ -30,13 +53,13 @@ export default function ContactForm() {
           type="email"
           placeholder="Email address"
           required
-          className="font-light w-full bg-transparent text-sm min-[400px]:text-base placeholder:text-neutral-400 border-0 border-b outline-none focus:outline-none border-neutral-300 focus:border-neutral-700 focus:ring-0"
+          className="font-light w-full bg-transparent text-sm min-[400px]:text-base lg:text-xl placeholder:text-neutral-400 border-0 border-b outline-none focus:outline-none focus:border-b-2 border-neutral-300 focus:border-neutral-700 focus:ring-0"
         />
 
         <div className="space-y-1">
           <label
             htmlFor="message"
-            className="block text-sm min-[400px]:text-base font-light text-neutral-800"
+            className="block text-sm min-[400px]:text-base lg:text-xl font-light text-neutral-800"
           >
             Message
           </label>
@@ -45,7 +68,7 @@ export default function ContactForm() {
             name="message"
             required
             className="w-full h-24 rounded-lg bg-white border border-neutral-200 p-3 resize-none
-                 focus:outline-none focus:border-neutral-800"
+                 focus:outline-none focus:border-neutral-800 focus:border-2"
           />
         </div>
 
