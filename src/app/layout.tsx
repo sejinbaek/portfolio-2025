@@ -30,7 +30,7 @@ export default function RootLayout({
         {/* toast */}
         <ClientToaster />
         <div
-          className="mx-auto w-full max-w-screen-lg px-5 md:px-6"
+          className="mx-auto my-20 w-full max-w-screen-xl px-5 md:px-6"
           style={{
             /* iOS 안전영역까지 고려 (선택) */
             paddingLeft: "max(env(safe-area-inset-left), 1rem)",

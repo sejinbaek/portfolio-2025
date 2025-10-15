@@ -5,7 +5,7 @@ import { contact } from "@/app/config/site";
 
 export default function Page() {
   return (
-    <div className="my-20 flex flex-col justify-center items-center gap-10 md:gap-20">
+    <div className="flex flex-col justify-center items-center gap-10 md:gap-20">
       <SectionHeader
         title="CONTACT"
         subtitle={
