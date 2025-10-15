@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ClientToaster from "../components/ClientToaster";
+import { Toaster } from "sonner";
 
 const pretendard = localFont({
   src: "../assets/fonts/PretendardVariable.woff2",
@@ -27,8 +27,7 @@ export default function RootLayout({
     <html lang="kr" className={`${pretendard.variable}`}>
       <body className={pretendard.className}>
         <Header />
-        {/* toast */}
-        <ClientToaster />
+        <Toaster position="top-center" />
         <div
           className="mx-auto my-20 w-full max-w-screen-xl px-5 md:px-6"
           style={{

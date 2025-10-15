@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORMSPREE_ID!);
@@ -11,10 +11,13 @@ export default function ContactForm() {
   useEffect(() => {
     if (state.succeeded) {
       toast.success("소중한 의견을 보내주셔서 감사합니다!", {
+        icon: null,
         style: {
           background: "#262626",
           color: "#fff",
           fontSize: "14px",
+          borderRadius: "8px",
+          border: "none",
         },
       });
     }
@@ -67,7 +70,7 @@ export default function ContactForm() {
             id="message"
             name="message"
             required
-            className="w-full h-24 rounded-lg bg-white border border-neutral-200 p-3 resize-none
+            className="w-full h-24 rounded-lg text-sm min-[400px]:text-base lg:text-xl bg-white border border-neutral-200 p-3 resize-none
                  focus:outline-none focus:border-neutral-800 focus:border-2"
           />
         </div>
