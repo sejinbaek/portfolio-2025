@@ -26,16 +26,14 @@ export default function Accordion({
           <section
             key={sec.label}
             className={clsx(
-              // 모양
               "relative rounded-md md:rounded-lg lg:rounded-xl border",
-              // 상태별 배경/텍스트/테두리
               isOpen
                 ? "bg-neutral-900 text-white border-neutral-900"
                 : "bg-white text-neutral-800 border-neutral-200",
-              // 부드러운 호버 (변환/그림자/색)
+              // 부드러운 호버
               "transform-gpu transition duration-200 ease-out",
               "md:hover:-translate-y-1",
-              // 색상 살짝 밝게
+              // 색상
               !isOpen && "hover:bg-neutral-100 hover:border-neutral-300",
               // 미세한 떨림 방지
               "[will-change:transform]"
@@ -114,14 +112,14 @@ export default function Accordion({
                   {sec.rows.map((r, idx) => (
                     <li
                       key={idx}
-                      className="flex flex-col md:flex-row md:items-baseline md:justify-between md:gap-6"
+                      className="flex flex-col md:flex-row xl:gap-20"
                     >
                       {/* 기간 */}
                       <div
                         className={clsx(
                           "tabular-nums whitespace-nowrap",
                           "text-xs md:text-base lg:text-xl md:self-start",
-                          "md:w-[18rem] md:min-w-[18rem] md:shrink-0",
+                          "md:w-[14rem] md:min-w-[14rem] md:shrink-0",
                           isOpen ? "text-neutral-200" : "text-neutral-500"
                         )}
                       >
@@ -129,7 +127,7 @@ export default function Accordion({
                       </div>
 
                       {/* 내용(메인 + 서브) */}
-                      <div className="min-w-0 md:flex-1">
+                      <div className="min-w-0 md:flex-1 whitespace-nowrap">
                         {/* 메인 (데스크톱에선 기간과 같은 줄) */}
                         <div className="text-xs min-[400px]:text-base lg:text-xl leading-6 break-words">
                           {r.text}
@@ -139,7 +137,7 @@ export default function Accordion({
                         {r.sub && (
                           <div
                             className={clsx(
-                              "text-[11px] min-[400px]:text-sm leading-5 break-words",
+                              "text-xs min-[400px]:text-sm leading-5 break-words mt-2 lg:text-base",
                               isOpen ? "text-white/70" : "text-neutral-500"
                             )}
                           >
