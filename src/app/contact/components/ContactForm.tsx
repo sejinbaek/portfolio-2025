@@ -30,7 +30,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full md:w-96 lg:w-128 rounded-2xl bg-neutral-100 p-7">
+    <div className="w-full min-[400px]:w-xs md:w-96 lg:w-128 rounded-2xl bg-neutral-100 p-8 lg:p-10">
       <form
         onSubmit={onSubmit}
         ref={formRef}
