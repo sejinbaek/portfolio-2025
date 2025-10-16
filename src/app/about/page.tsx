@@ -76,6 +76,7 @@ export default function AboutPage() {
             alt="백세진"
             fill
             className="object-cover"
+            sizes="(min-width: 1024px) 672px, (min-width: 768px) 320px, 160px"
           />
         </div>
         <div className="flex flex-col items-center gap-8 lg:gap-14">

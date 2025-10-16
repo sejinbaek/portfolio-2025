@@ -30,14 +30,15 @@ export default function Hero() {
           <h1 id="hero-title" className={`{textStyle} mb-4 lg:mb-0`}>
             CREATIVE
           </h1>
-          <div className="hidden lg:block">
+          <div className="relative hidden lg:block h-auto overflow-hidden">
             <Image
               src="/hero/flower.webp"
               alt="히어로 이미지"
-              width={500}
-              height={200}
+              width={1600}
+              height={900}
               priority
-              className="lg:w-120 lg:h-21 xl:w-160 xl:h-27"
+              className="lg:w-[450px] lg:h-[80px] xl:w-[600px] xl:h-[110px]"
+              aria-hidden="true"
             />
           </div>
         </div>
@@ -81,7 +82,7 @@ export default function Hero() {
               height="24"
               fill="currentColor"
               aria-hidden="true"
-              className={shapeStyle}
+              className={`{shapeStyle} text-neutral-300`}
             >
               {/* 가운데 원 */}
               <circle cx="12" cy="12" r="6.5" />

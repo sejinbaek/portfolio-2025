@@ -60,7 +60,7 @@ export default function Footer() {
             © 2025 Baek Sejin. All rights reserved.
           </p>
 
-          <div className="flex items-center justify-center md:justify-end gap-4">
+          <div className="flex items-center justify-center md:justify-end gap-4 invert brightness-0">
             <SocialLinks items={contact.socials} />
           </div>
         </div>
