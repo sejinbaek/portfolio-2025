@@ -27,13 +27,13 @@ export default function Header() {
       <div
         className={clsx(
           "relative flex items-center justify-between border-b border-neutral-200 bg-white",
-          "pl-4 pr-2 pt-1 md:pl-2 md:pr-4 md:py-3 xl:pl-10 xl:pr-12 xl:py-2"
+          "pl-4 pr-2 pt-2 pb-1 md:pl-2 md:pr-4 md:pt-3 md:pb-2 xl:pl-10 xl:pr-12 xl:pt-2 xl:pb-1"
         )}
       >
         {/* 로고 */}
         <Link
           href="/"
-          className="font-semibold text-sm md:text-base lg:text-xl tracking-wide text-neutral-800 md:p-2"
+          className="font-semibold text-base md:text-xl lg:text-2xl tracking-wide text-neutral-800 md:p-2"
         >
           SEJIN BAEK
         </Link>
@@ -92,8 +92,8 @@ export default function Header() {
           role="dialog"
           aria-labelledby="mobileMenuTitle"
           className={clsx(
-            "fixed right-0 top-0 z-[60] h-full w-72 bg-white shadow-xl md:hidden",
-            "transform-gpu transition-transform duration-200 ease-out",
+            "fixed right-0 top-0 z-[60] h-full w-full bg-white shadow-xl md:hidden",
+            "transform-gpu transition-transform duration-300 ease-out",
             open ? "translate-x-0" : "translate-x-full"
           )}
         >
@@ -118,7 +118,7 @@ export default function Header() {
             </button>
           </div>
 
-          <ul className="flex flex-col items-center gap-8 py-10 text-sm tracking-wide text-neutral-800 focus:border-b focus:border-neutral-800">
+          <ul className="flex flex-col items-center gap-10 py-10 text-base tracking-wide text-neutral-800">
             {nav.header.map((item) => (
               <li key={item.label}>
                 <Link
