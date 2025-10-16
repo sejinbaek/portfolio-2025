@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Toaster } from "sonner";
+import RouteMargin from "../components/RouteMargin";
 
 const pretendard = localFont({
   src: "../assets/fonts/PretendardVariable.woff2",
@@ -28,17 +29,7 @@ export default function RootLayout({
       <body className={pretendard.className}>
         <Header />
         <Toaster position="top-center" />
-        <div
-          className="mx-auto my-20 w-full max-w-screen-xl px-5 md:px-6"
-          style={{
-            /* iOS 안전영역까지 고려 (선택) */
-            paddingLeft: "max(env(safe-area-inset-left), 1rem)",
-            paddingRight: "max(env(safe-area-inset-right), 1rem)",
-          }}
-        >
-          {children}
-        </div>
-
+        <RouteMargin>{children}</RouteMargin>
         <Footer />
       </body>
     </html>

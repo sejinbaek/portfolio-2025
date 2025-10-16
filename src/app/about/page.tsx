@@ -6,7 +6,7 @@ import { contact, skills, aboutSections } from "../config/site";
 import SkillBadge from "./components/SkillBadge";
 import Accordion from "./components/Accordion";
 
-export default function Page() {
+export default function AboutPage() {
   const labelMap: Record<string, string> = {
     instagram: "인스타 보러가기",
     blog: "블로그 보러가기",

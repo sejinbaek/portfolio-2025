@@ -1,9 +1,10 @@
+"use client";
 import SectionHeader from "../../components/SectionHeader";
 import ContactForm from "./components/ContactForm";
 import GetInTouch from "./components/GetInTouch";
 import { contact } from "@/app/config/site";
 
-export default function Page() {
+export default function ContactPage() {
   return (
     <div className="flex flex-col justify-center items-center gap-10 md:gap-20">
       <SectionHeader
