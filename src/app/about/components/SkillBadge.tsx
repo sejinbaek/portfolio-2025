@@ -12,7 +12,7 @@ export default function SkillBadge({
   className = "",
 }: SkillBadgeProps) {
   const base =
-    "inline-flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-4 py-1 text-xs min-[400px]:text-sm lg:text-xl font-light text-neutral-800";
+    "inline-flex items-center rounded-full border border-neutral-200 bg-neutral-100 px-4 py-1 text-xs min-[400px]:text-sm xl:text-xl font-light text-neutral-800";
   return (
     <div className={`${base} ${className}`}>
       {icon && (

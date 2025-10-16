@@ -69,7 +69,7 @@ export default function Page() {
           />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-12 my-20 lg:mt-24 lg:mb-5 md:pl-4 lg:pl-0">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-12 my-20 lg:mt-24 lg:mb-5 md:pl-4 lg:pl-8">
         <div className="relative w-40 md:w-xs lg:w-2xl aspect-[3/4] overflow-hidden rounded-2xl">
           <Image
             src="/about/id-photo.webp"
@@ -80,7 +80,7 @@ export default function Page() {
         </div>
         <div className="flex flex-col items-center gap-8 lg:gap-14">
           <div className="flex flex-col items-center lg:items-start w-full gap-4 lg:gap-6">
-            <h4 className="text-base font-bold min-[400px]:text-xl md:text-2xl lg:text-3xl">
+            <h4 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
               Links
             </h4>
             <div className="grid grid-cols-2 gap-2 lg:flex lg:gap-4">
@@ -98,7 +98,7 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col items-center lg:items-start gap-4 lg:gap-6">
-            <h4 className="text-base font-bold min-[400px]:text-xl md:text-2xl lg:text-3xl">
+            <h4 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
               My Skills
             </h4>
             <div className="flex flex-wrap justify-center md:px-10 lg:px-0 lg:justify-start gap-2 lg:gap-3">
