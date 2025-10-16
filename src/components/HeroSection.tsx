@@ -102,7 +102,7 @@ export default function Hero() {
             </svg>
           </div>
 
-          {/* 7. PORTFOLIO — 외곽선만 */}
+          {/* 7. PORTFOLIO */}
           <p className={textStyle}>PORTFOLIO</p>
         </div>
       </div>

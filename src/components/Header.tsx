@@ -27,13 +27,13 @@ export default function Header() {
       <div
         className={clsx(
           "relative flex items-center justify-between border-b border-neutral-200 bg-white",
-          "pl-4 pr-2 pt-1 md:px-8 md:py-3 lg:px-10 lg:py-4"
+          "pl-4 pr-2 pt-1 md:pl-2 md:pr-4 md:py-3 xl:pl-10 xl:pr-12 xl:py-2"
         )}
       >
         {/* 로고 */}
         <Link
           href="/"
-          className="font-semibold text-sm md:text-base lg:text-xl tracking-wide text-neutral-800"
+          className="font-semibold text-sm md:text-base lg:text-xl tracking-wide text-neutral-800 md:p-2"
         >
           SEJIN BAEK
         </Link>
