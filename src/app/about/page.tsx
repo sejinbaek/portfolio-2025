@@ -19,7 +19,7 @@ export default function AboutPage() {
   );
 
   return (
-    <section className="flex flex-col md:gap-14 lg:gap-16 mx-auto">
+    <section className="flex flex-col md:gap-14 lg:gap-16 mx-auto w-full">
       <div className="relative">
         {/* 상단 장식 */}
         <div
