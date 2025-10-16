@@ -119,6 +119,7 @@ export const aboutSections: AccordionData[] = [
 // ==== Navigation (헤더) ====
 export const nav = {
   header: [
+    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
     { label: "Contact", href: "/contact" },
