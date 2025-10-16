@@ -22,7 +22,7 @@ export default function Hero() {
       <div
         className={clsx(
           anton.className,
-          "flex flex-col justify-center w-full mx-auto text-center space-y-4 text-4xl min-[350px]:text-6xl md:text-8xl xl:text-9xl text-neutral-800"
+          "flex flex-col justify-center w-full mx-auto text-center space-y-4 text-4xl min-[350px]:text-6xl md:text-8xl xl:text-9xl text-neutral-800 dark:text-white"
         )}
       >
         <div className="flex items-center justify-center lg:justify-between">

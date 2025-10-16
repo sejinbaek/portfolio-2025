@@ -27,7 +27,7 @@ export default function GetInTouch({
         </p>
         <a
           href={`mailto:${email}`}
-          className="text-base min-[400px]:text-xl md:text-2xl text-neutral-800"
+          className="text-base min-[400px]:text-xl md:text-2xl text-neutral-800 dark:text-white"
         >
           {email}
         </a>

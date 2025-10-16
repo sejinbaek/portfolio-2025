@@ -15,7 +15,7 @@ export default function LinkButton({
   ariaLabel,
 }: LinkButtonProps) {
   const base =
-    "inline-flex items-center gap-2 pt-4 pb-3 px-3 rounded-xl min-[400px]:rounded-2xl text-xs min-[400px]:text-base xl:text-xl border border-neutral-200 text-neutral-800 transform-gpu transition duration-200 ease-out hover:-translate-y-1 hover:bg-neutral-100 [will-change:transform]";
+    "inline-flex items-center gap-2 pt-4 pb-3 px-3 rounded-xl min-[400px]:rounded-2xl text-xs min-[400px]:text-base xl:text-xl border border-neutral-200 text-neutral-800 transform-gpu transition duration-200 ease-out hover:-translate-y-1 hover:bg-neutral-100 [will-change:transform] dark:text-white";
   const ArrowIcon = (
     <span
       aria-hidden="true"

@@ -20,7 +20,7 @@ const SectionHeader = ({
 
   return (
     <div
-      className={`flex flex-col gap-4 min-[400px]:gap-6 lg:gap-8 ${alignCls} ${className}`}
+      className={`flex flex-col gap-4 min-[400px]:gap-6 lg:gap-8 dark:text-white ${alignCls} ${className}`}
     >
       <span
         className={[

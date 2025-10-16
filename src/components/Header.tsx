@@ -33,7 +33,7 @@ export default function Header() {
         {/* 로고 */}
         <Link
           href="/"
-          className="font-semibold text-sm md:text-base lg:text-xl tracking-wide"
+          className="font-semibold text-sm md:text-base lg:text-xl tracking-wide text-neutral-800"
         >
           SEJIN BAEK
         </Link>
@@ -61,10 +61,10 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-neutral-100"
+          className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-neutral-100 text-neutral-800"
           aria-controls={menuId}
           aria-expanded={open}
-          aria-label="Open menu"
+          aria-label="메뉴 열기"
         >
           {/* 햄버거 아이콘 */}
           <svg width="22" height="22" viewBox="0 0 24 24">
@@ -90,18 +90,21 @@ export default function Header() {
         <aside
           id={menuId}
           role="dialog"
-          aria-modal="true"
+          aria-labelledby="mobileMenuTitle"
           className={clsx(
             "fixed right-0 top-0 z-[60] h-full w-72 bg-white shadow-xl md:hidden",
             "transform-gpu transition-transform duration-200 ease-out",
             open ? "translate-x-0" : "translate-x-full"
           )}
         >
+          <h2 id="mobileMenuTitle" className="sr-only">
+            모바일 내비게이션 메뉴
+          </h2>
           <div className="flex items-center justify-end px-4 py-3">
             <button
               type="button"
               onClick={() => setOpen(false)}
-              aria-label="Close menu"
+              aria-label="메뉴 닫기"
               className="rounded p-2 hover:bg-neutral-100"
             >
               <svg width="20" height="20" viewBox="0 0 24 24">
@@ -115,7 +118,7 @@ export default function Header() {
             </button>
           </div>
 
-          <ul className="flex flex-col items-center gap-8 py-10 text-sm tracking-wide">
+          <ul className="flex flex-col items-center gap-8 py-10 text-sm tracking-wide text-neutral-800">
             {nav.header.map((item) => (
               <li key={item.label}>
                 <Link
