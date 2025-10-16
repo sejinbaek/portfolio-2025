@@ -34,8 +34,8 @@ export default function Hero() {
             <Image
               src="/hero/flower.webp"
               alt="히어로 이미지"
-              width={1600}
-              height={900}
+              width={1000}
+              height={176}
               loading="lazy"
               className="lg:w-[450px] lg:h-[80px] xl:w-[600px] xl:h-[110px]"
               aria-hidden="true"
