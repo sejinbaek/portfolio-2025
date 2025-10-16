@@ -14,7 +14,7 @@ export default function AboutPage() {
   };
 
   // 유튜브 제외
-  const socialsForAbout = contact.socialsDark.filter(
+  const socialsForAbout = contact.socials.filter(
     (social) => social.name !== "youtube"
   );
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
         {/* 상단 장식 */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 -translate-y-1/2 rotate-180 px-2 md:px-10 lg:px-32"
+          className="pointer-events-none absolute inset-x-0 top-0 -translate-y-1/2 rotate-180 px-2 md:px-10 lg:px-32 dark:invert dark:brightness-100"
         >
           <Image
             src="../about/about-decor.svg"
@@ -58,7 +58,7 @@ export default function AboutPage() {
         {/* 하단 장식 */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-1/2 px-2 md:px-14 lg:px-32"
+          className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-1/2 px-2 md:px-14 lg:px-32 dark:invert dark:brightness-100"
         >
           <Image
             src="../about/about-decor.svg"

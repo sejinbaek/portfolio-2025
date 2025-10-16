@@ -117,7 +117,7 @@ export default function Accordion({
                       {/* 기간 */}
                       <div
                         className={clsx(
-                          "tabular-nums whitespace-nowrap",
+                          "tabular-nums",
                           "text-xs md:text-base lg:text-xl md:self-start",
                           "md:w-[14rem] md:min-w-[14rem] md:shrink-0",
                           isOpen ? "text-neutral-200" : "text-neutral-500"
@@ -137,7 +137,7 @@ export default function Accordion({
                         {r.sub && (
                           <div
                             className={clsx(
-                              "text-xs min-[400px]:text-sm leading-5 break-words mt-2 lg:text-base",
+                              "text-[10px] min-[400px]:text-sm leading-5 break-words lg:text-base md:mt-2",
                               isOpen ? "text-white/70" : "text-neutral-500"
                             )}
                           >

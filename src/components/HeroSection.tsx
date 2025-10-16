@@ -11,7 +11,7 @@ const anton = Anton({
 
 export default function Hero() {
   const shapeStyle =
-    "w-10 h-10 min-[350px]:w-12 min-[350px]:h-12 xl:w-16 xl:h-16";
+    "w-8 h-8 min-[350px]:w-10 min-[350px]:h-10 xl:w-14 xl:h-14";
   const textStyle = "text-white text-stroke";
 
   return (
@@ -27,7 +27,7 @@ export default function Hero() {
       >
         <div className="flex items-center justify-center lg:justify-between">
           {/* 1. CREATIVE */}
-          <h1 id="hero-title" className={textStyle}>
+          <h1 id="hero-title" className={`{textStyle} mb-4 lg:mb-0`}>
             CREATIVE
           </h1>
           <div className="hidden lg:block">
@@ -45,14 +45,22 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row gap-2 items-center lg:justify-between">
           {/* 2. 장식 아이콘 */}
           <div className="flex justify-center" aria-hidden>
-            <Image
-              src="/hero/shine-diamond.svg"
-              alt="히어로 장식-1"
-              width={28}
-              height={28}
-              priority
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="currentColor"
+              aria-hidden="true"
               className={shapeStyle}
-            />
+            >
+              <path
+                d="M12 2
+           C 9.5 7.5, 7.5 9.5, 2 12
+           C 7.5 14.5, 9.5 16.5, 12 22
+           C 14.5 16.5, 16.5 14.5, 22 12
+           C 16.5 9.5, 14.5 7.5, 12 2 Z"
+              />
+            </svg>
           </div>
           {/* 3. FRONTEND / 4. DEVELOPER — 채움(볼드) */}
           <p className="leading-normal">
@@ -61,19 +69,36 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="flex flex-col mt-6 lg:mt-0 lg:flex-row gap-4 lg:items-center">
+        <div className="flex flex-col mt-6 lg:mt-0 lg:flex-row gap-4 md:gap-8 lg:gap-4 lg:items-center">
           {/* 5. SEJIN BAEK */}
           <p className={textStyle}>SEJIN BAEK</p>
 
           {/* 6. 회색 도형(장식) */}
           <div className="flex justify-center" aria-hidden>
-            <Image
-              src="/hero/blob-flower.svg"
-              alt="히어로 장식-2"
-              width={28}
-              height={28}
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="currentColor"
+              aria-hidden="true"
               className={shapeStyle}
-            />
+            >
+              {/* 가운데 원 */}
+              <circle cx="12" cy="12" r="6.5" />
+              {/* 둘레의 둥근 스캘럽(12개) */}
+              <circle cx="19" cy="12" r="3.5" />
+              <circle cx="18.062" cy="15.5" r="3.5" />
+              <circle cx="15.5" cy="18.062" r="3.5" />
+              <circle cx="12" cy="19" r="3.5" />
+              <circle cx="8.5" cy="18.062" r="3.5" />
+              <circle cx="5.938" cy="15.5" r="3.5" />
+              <circle cx="5" cy="12" r="3.5" />
+              <circle cx="5.938" cy="8.5" r="3.5" />
+              <circle cx="8.5" cy="5.938" r="3.5" />
+              <circle cx="12" cy="5" r="3.5" />
+              <circle cx="15.5" cy="5.938" r="3.5" />
+              <circle cx="18.062" cy="8.5" r="3.5" />
+            </svg>
           </div>
 
           {/* 7. PORTFOLIO — 외곽선만 */}

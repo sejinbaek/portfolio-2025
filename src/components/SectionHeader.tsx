@@ -20,7 +20,7 @@ const SectionHeader = ({
 
   return (
     <div
-      className={`flex flex-col gap-4 min-[400px]:gap-6 lg:gap-8 dark:text-white ${alignCls} ${className}`}
+      className={`flex flex-col gap-4 min-[400px]:gap-6 lg:gap-8 ${alignCls} ${className}`}
     >
       <span
         className={[
@@ -33,7 +33,7 @@ const SectionHeader = ({
       </span>
 
       {subtitle && (
-        <p className="max-w-prose text-sm leading-6 text-neutral-800 whitespace-pre-line min-[400px]:text-base md:text-xl lg:text-2xl md:leading-8 lg:leading-9">
+        <p className="max-w-prose text-sm leading-6 text-neutral-800 whitespace-pre-line min-[400px]:text-base md:text-xl lg:text-2xl md:leading-8 lg:leading-9 dark:text-white">
           {subtitle}
         </p>
       )}

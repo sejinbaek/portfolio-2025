@@ -7,7 +7,7 @@ export const contact = {
   email: "sejin9767@gmail.com",
 
   // 밝은 배경(콘택트 페이지) — 검정 아이콘
-  socialsDark: [
+  socials: [
     {
       name: "instagram",
       href: "https://www.instagram.com/whitemondejin?igsh=MzB5cm44ZWtpdmt2",
@@ -27,30 +27,6 @@ export const contact = {
       name: "github",
       href: "https://github.com/sejinbaek",
       icon: "/icons/github-black.svg",
-    },
-  ],
-
-  // 어두운 배경(푸터) — 흰색 아이콘
-  socialsLight: [
-    {
-      name: "instagram",
-      href: "https://www.instagram.com/whitemondejin?igsh=MzB5cm44ZWtpdmt2",
-      icon: "/icons/instagram-white.svg",
-    },
-    {
-      name: "youtube",
-      href: "https://www.youtube.com/@whitemondejin",
-      icon: "/icons/youtube-white.svg",
-    },
-    {
-      name: "blog",
-      href: "https://blog.naver.com/sehadang_",
-      icon: "/icons/blog-white.svg",
-    },
-    {
-      name: "github",
-      href: "https://github.com/sejinbaek",
-      icon: "/icons/github-white.svg",
     },
   ],
   resume: { href: "/about/baek-sejin.pdf", label: "이력서 보러가기" },

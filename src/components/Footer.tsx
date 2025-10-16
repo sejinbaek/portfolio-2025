@@ -61,7 +61,7 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center justify-center md:justify-end gap-4">
-            <SocialLinks items={contact.socialsLight} />
+            <SocialLinks items={contact.socials} />
           </div>
         </div>
       </div>

@@ -21,13 +21,21 @@ export default function LinkButton({
       aria-hidden="true"
       className="inline-flex translate-x-0 translate-y-0 transition-transform"
     >
-      <Image
-        src="/about/arrow.svg"
-        alt=""
-        width={16}
-        height={16}
-        className="w-2 h-2 min-[400px]:w-3 min-[400px]:h-3"
-      />
+      <svg
+        viewBox="0 0 16 16"
+        width="16"
+        height="16"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="w-3 h-3 min-[400px]:w-4 min-[400px]:h-4 lg:w-5 lg:h-5"
+      >
+        <path d="M3 13L13 3" />
+        <path d="M9 3h4v4" />
+      </svg>
     </span>
   );
 

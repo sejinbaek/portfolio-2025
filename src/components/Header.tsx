@@ -51,7 +51,7 @@ export default function Header() {
           ))}
           <Link
             href="/contact"
-            className="rounded-full border px-4 py-1.5 text-sm md:text-base hover:bg-neutral-800 hover:text-white transition-colors"
+            className="rounded-full border border-neutral-800 text-neutral-800 px-4 py-1.5 text-sm md:text-base hover:bg-neutral-800 hover:text-white transition-colors"
           >
             Contact me
           </Link>

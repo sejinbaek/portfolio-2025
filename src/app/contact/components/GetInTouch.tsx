@@ -33,12 +33,12 @@ export default function GetInTouch({
         </a>
       </div>
 
-      {contact.socialsDark.length > 0 && (
+      {contact.socials.length > 0 && (
         <div className="space-y-2 md:space-y-3">
           <p className="text-base min-[400px]:text-xl md:text-2xl text-neutral-400">
             Follow Me
           </p>
-          <SocialLinks items={contact.socialsDark} />
+          <SocialLinks items={contact.socials} />
         </div>
       )}
     </section>
