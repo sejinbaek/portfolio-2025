@@ -27,7 +27,7 @@ export default function Hero() {
       >
         <div className="flex items-center justify-center lg:justify-between">
           {/* 1. CREATIVE */}
-          <h1 id="hero-title" className={`{textStyle} mb-4 lg:mb-0`}>
+          <h1 id="hero-title" className={clsx(textStyle, "mb-4 lg:mb-0")}>
             CREATIVE
           </h1>
           <div className="relative hidden lg:block h-auto overflow-hidden">
@@ -82,7 +82,7 @@ export default function Hero() {
               height="24"
               fill="currentColor"
               aria-hidden="true"
-              className={`{shapeStyle} text-neutral-300`}
+              className={clsx(shapeStyle, "text-neutral-300")}
             >
               {/* 가운데 원 */}
               <circle cx="12" cy="12" r="6.5" />
