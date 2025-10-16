@@ -1,7 +1,5 @@
 "use client";
-
 import SectionHeader from "../../components/SectionHeader";
-import ProjectCard from "./components/ProjectCard";
 
 export default function ProjectPage() {
   return (
@@ -15,9 +13,6 @@ export default function ProjectPage() {
           </>
         }
       />
-      <div className="">
-        <ProjectCard />
-      </div>
     </section>
   );
 }
