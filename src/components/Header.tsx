@@ -33,7 +33,7 @@ export default function Header() {
         {/* 로고 */}
         <Link
           href="/"
-          className="font-semibold text-base md:text-xl lg:text-2xl tracking-wide text-neutral-800 md:p-2"
+          className="font-semibold text-base md:text-xl tracking-wide text-neutral-800 md:p-2"
         >
           SEJIN BAEK
         </Link>
