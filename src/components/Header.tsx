@@ -39,12 +39,12 @@ export default function Header() {
         </Link>
 
         {/* 데스크톱 네비게이션 */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-10">
+        <nav className="hidden md:flex items-center gap-4">
           {withoutContact.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm md:text-base text-neutral-700 hover:text-black"
+              className="text-sm md:text-base md:px-3 md:py-1 xl:px-4 xl:py-2 rounded-full text-neutral-800 hover:bg-neutral-100"
             >
               {item.label}
             </Link>
