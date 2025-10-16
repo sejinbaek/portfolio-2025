@@ -22,6 +22,7 @@ export default function SocialLinks({ items }: Props) {
             alt=""
             width={50}
             height={50}
+            loading="lazy"
             className="w-6 h-6 min-[400px]:w-7 min-[400px]:h-7 lg:w-8 lg:h-8 dark:invert dark:brightness-100"
           />
         </a>
