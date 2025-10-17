@@ -1,6 +1,13 @@
 // ==== Types ====
 export type Social = { name: string; href: string; icon: string };
 export type NavItem = { label: string; href: string };
+export type TimelineRow = { text: string; sub?: string; period?: string };
+export type AccordionData = { label: string; rows: TimelineRow[] };
+export type SkillBadgeProps = {
+  label: string;
+  icon?: string;
+  className?: string;
+};
 
 // ==== Contact Config ====
 export const contact = {
@@ -28,8 +35,11 @@ export const contact = {
       href: "https://github.com/sejinbaek",
       icon: "/icons/github-black.svg",
     },
-  ],
-  resume: { href: "/about/baek-sejin.pdf", label: "이력서 보러가기" },
+  ] satisfies Social[],
+  resume: {
+    href: "/about/baek-sejin.pdf",
+    label: "이력서 보러가기",
+  },
 };
 
 // ==== About Page Config ====
@@ -46,17 +56,14 @@ export const skills = [
   { label: "Vite", icon: "/icons/Vite.svg" },
   { label: "Figma", icon: "/icons/Figma.svg" },
   { label: "Photoshop", icon: "/icons/Photoshop.svg" },
-];
-
-export type TimelineRow = { text: string; sub?: string; period?: string };
-export type AccordionData = { label: string; rows: TimelineRow[] };
+] satisfies SkillBadgeProps[];
 
 export const aboutSections: AccordionData[] = [
   {
     label: "Experience",
     rows: [
       {
-        text: "LG 유레카 프론트엔드 개발자 과정 수료",
+        text: "LG유플러스 유레카 프론트엔드 개발자 과정 수료",
         period: "2025.01 ~ 2025. 08",
       },
       {
@@ -84,7 +91,7 @@ export const aboutSections: AccordionData[] = [
     label: "Awards",
     rows: [
       {
-        text: "LG 유플러스 유레카 최종 융합 프로젝트 우수상",
+        text: "LG유플러스 유레카 최종 융합 프로젝트 우수상",
         sub: "(잇플레이스: 통신사 멤버십 제휴처 안내 지도 서비스)",
         period: "2025. 08. 12",
       },
@@ -100,4 +107,4 @@ export const nav = {
     { label: "Projects", href: "/projects" },
     { label: "Contact", href: "/contact" },
   ] satisfies NavItem[],
-} as const;
+};
