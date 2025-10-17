@@ -27,7 +27,7 @@ export default function Hero() {
       >
         <div className="flex items-center justify-center lg:justify-between">
           {/* 1. CREATIVE */}
-          <h1 id="hero-title" className={clsx(textStyle, "mb-4 lg:mb-0")}>
+          <h1 id="hero-title" className={clsx(textStyle, "mb-2 lg:mb-0")}>
             CREATIVE
           </h1>
           <div className="relative hidden lg:block h-auto overflow-hidden">
