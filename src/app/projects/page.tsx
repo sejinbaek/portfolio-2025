@@ -1,9 +1,11 @@
 "use client";
 import SectionHeader from "../../components/SectionHeader";
+import ProjectList from "./components/ProjectList";
+import { projects } from "../projects/data/project";
 
 export default function ProjectPage() {
   return (
-    <section className="flex flex-col md:gap-14 lg:gap-16 mx-auto w-full">
+    <section className="flex flex-col gap-10 md:gap-14 lg:gap-16 mx-auto w-full">
       <SectionHeader
         title="PROJECTS"
         subtitle={
@@ -13,6 +15,7 @@ export default function ProjectPage() {
           </>
         }
       />
+      <ProjectList items={Object.values(projects)} />
     </section>
   );
 }
