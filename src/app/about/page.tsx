@@ -31,7 +31,6 @@ export default function AboutPage() {
             alt="배경 장식"
             width={50}
             height={50}
-            loading="lazy"
             className="w-12 h-12 md:w-16 md:h-16 lg:w-28 lg:h-28"
           />
         </div>
@@ -66,7 +65,6 @@ export default function AboutPage() {
             alt="배경 장식"
             width={50}
             height={50}
-            loading="lazy"
             className="w-12 h-12 md:w-16 md:h-16 lg:w-28 lg:h-28"
           />
         </div>
@@ -77,7 +75,6 @@ export default function AboutPage() {
             src="/about/id-photo.webp"
             alt="백세진"
             fill
-            loading="lazy"
             className="object-cover"
             sizes="(min-width: 1024px) 672px, (min-width: 768px) 320px, 160px"
           />

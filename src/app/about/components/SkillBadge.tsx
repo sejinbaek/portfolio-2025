@@ -1,10 +1,5 @@
 import Image from "next/image";
-
-type SkillBadgeProps = {
-  label: string;
-  icon?: string;
-  className?: string;
-};
+import { SkillBadgeProps } from "../../config/site";
 
 export default function SkillBadge({
   label,
@@ -21,7 +16,6 @@ export default function SkillBadge({
           alt={label}
           width={16}
           height={16}
-          loading="lazy"
           className="inline-block mr-1 w-3 h-3 min-[400px]:w-4 min-[400px]:h-4 lg:w-6 lg:h-6 object-contain"
         />
       )}
