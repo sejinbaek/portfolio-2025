@@ -33,7 +33,7 @@ const SectionHeader = ({
       </span>
 
       {subtitle && (
-        <p className="max-w-prose text-sm leading-6 text-neutral-800 whitespace-pre-line min-[400px]:text-base md:text-xl lg:text-2xl md:leading-8 lg:leading-9 dark:text-white">
+        <p className="max-w-prose text-base leading-7 text-neutral-800 whitespace-pre-line min-[400px]:text-lg md:text-xl lg:text-2xl md:leading-8 lg:leading-9 dark:text-white">
           {subtitle}
         </p>
       )}
