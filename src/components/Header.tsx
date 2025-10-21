@@ -33,6 +33,7 @@ export default function Header() {
         {/* 로고 */}
         <Link
           href="/"
+          replace
           className="font-semibold text-base md:text-xl tracking-wide text-neutral-800 md:p-2"
         >
           SEJIN BAEK
@@ -44,6 +45,7 @@ export default function Header() {
             <Link
               key={item.label}
               href={item.href}
+              replace
               className="text-sm md:text-base md:px-3 md:py-1 xl:px-4 xl:py-2 rounded-full text-neutral-800 hover:bg-neutral-100"
             >
               {item.label}
@@ -51,6 +53,7 @@ export default function Header() {
           ))}
           <Link
             href="/contact"
+            replace
             className="rounded-full border border-neutral-800 text-neutral-800 px-4 py-1.5 text-sm md:text-base hover:bg-neutral-800 hover:text-white transition-colors"
           >
             Contact me
@@ -123,6 +126,7 @@ export default function Header() {
               <li key={item.label}>
                 <Link
                   href={item.href}
+                  replace
                   onClick={() => setOpen(false)}
                   className="font-medium"
                 >
