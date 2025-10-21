@@ -87,10 +87,18 @@ export const projects: Record<string, Project> = {
 
     thumbnail: "",
     screenshots: [
-      { src: "", alt: "" },
-      { src: "", alt: "" },
-      { src: "", alt: "" },
-      { src: "", alt: "" },
+      {
+        src: "/projects/jobthoughts-1.webp",
+        alt: "잡생각 프로젝트 이미지 1",
+      },
+      {
+        src: "/projects/jobthoughts-2.webp",
+        alt: "잡생각 프로젝트 이미지 2",
+      },
+      {
+        src: "/projects/jobthoughts-3.webp",
+        alt: "잡생각 프로젝트 이미지 3",
+      },
     ],
 
     performance: "",
