@@ -28,7 +28,7 @@ export default function AboutPage() {
         >
           <Image
             src="../about/about-decor.svg"
-            alt="배경 장식"
+            alt=""
             width={50}
             height={50}
             className="w-12 h-12 md:w-16 md:h-16 lg:w-28 lg:h-28"
@@ -62,7 +62,7 @@ export default function AboutPage() {
         >
           <Image
             src="../about/about-decor.svg"
-            alt="배경 장식"
+            alt=""
             width={50}
             height={50}
             className="w-12 h-12 md:w-16 md:h-16 lg:w-28 lg:h-28"
