@@ -109,7 +109,7 @@ export default function Header() {
               type="button"
               onClick={() => setOpen(false)}
               aria-label="메뉴 닫기"
-              className="rounded p-2 hover:bg-neutral-100"
+              className="rounded p-2 hover:bg-neutral-100 dark:text-neutral-800"
             >
               <svg width="20" height="20" viewBox="0 0 24 24">
                 <path

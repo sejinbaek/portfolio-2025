@@ -36,12 +36,12 @@ export default function ProjectCard({
           {title}
         </h3>
         {subtitle && (
-          <p className="py-2 lg:pt-4 font-semibold text-sm min-[360px]:text-base md:text-lg lg:text-xl text-neutral-600">
+          <p className="py-2 lg:pt-4 font-semibold text-sm min-[360px]:text-base md:text-lg lg:text-xl text-neutral-600 dark:text-neutral-300">
             {subtitle}
           </p>
         )}
         {description && (
-          <p className="text-sm min-[360px]:text-base md:text-lg xl:text-xl xl:leading-8 text-neutral-500">
+          <p className="text-sm min-[360px]:text-base md:text-lg xl:text-xl xl:leading-8 text-neutral-500 dark:text-white">
             {description}
           </p>
         )}

@@ -14,7 +14,7 @@ export default function GetInTouch({
   className = "",
 }: Props) {
   const baseTextStyle =
-    "text-base min-[400px]:text-xl md:text-2xl text-neutral-500";
+    "text-base min-[400px]:text-xl md:text-2xl text-neutral-500 dark:text-neutral-300";
   return (
     <section
       className={`flex flex-col items-center text-center gap-4 md:gap-8 lg:gap-10 ${className}`}
