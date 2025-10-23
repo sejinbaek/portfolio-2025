@@ -13,6 +13,8 @@ export default function GetInTouch({
   email,
   className = "",
 }: Props) {
+  const baseTextStyle =
+    "text-base min-[400px]:text-xl md:text-2xl text-neutral-500";
   return (
     <section
       className={`flex flex-col items-center text-center gap-4 md:gap-8 lg:gap-10 ${className}`}
@@ -22,9 +24,7 @@ export default function GetInTouch({
       </h3>
 
       <div className="space-y-1">
-        <p className="text-base min-[400px]:text-xl md:text-2xl text-neutral-400">
-          Email
-        </p>
+        <p className={baseTextStyle}>Email</p>
         <a
           href={`mailto:${email}`}
           className="text-base min-[400px]:text-xl md:text-2xl text-neutral-800 dark:text-white"
@@ -35,9 +35,7 @@ export default function GetInTouch({
 
       {contact.socials.length > 0 && (
         <div className="space-y-2 md:space-y-3">
-          <p className="text-base min-[400px]:text-xl md:text-2xl text-neutral-400">
-            Follow Me
-          </p>
+          <p className={baseTextStyle}>Follow Me</p>
           <SocialLinks items={contact.socials} />
         </div>
       )}
