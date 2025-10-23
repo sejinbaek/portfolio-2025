@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
+import HeroSection from "../components/HeroSection";
 
-const HeroSection = dynamic(() => import("../components/HeroSection"));
 const AboutPage = dynamic(() => import("./about/page"));
 const ContactPage = dynamic(() => import("./contact/page"));
 
