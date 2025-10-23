@@ -1,10 +1,10 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
-import type { Project } from "../data/project";
-import { GroupedStackItem } from "../data/project";
+import type { Project, GroupedStackItem } from "../data/project";
 import { projects } from "../data/project";
 import InsightSections from "../components/InsightSections";
+import { projectMetadata, pageMetadata } from "../../../lib/seo";
 
 // 슬러그로 프로젝트 찾기
 function getProject(slug: string): Project | undefined {
@@ -24,16 +24,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const p = getProject(slug);
-  if (!p) return { title: "Project" };
-  return {
-    title: `${p.title} - Projects`,
-    description: p.description,
-    openGraph: {
-      title: p.title,
-      description: p.description,
-      images: [p.cover.src],
-    },
-  };
+  if (!p) return pageMetadata({ title: "Project", path: `/projects/${slug}` });
+  return projectMetadata(p, `/projects/${slug}`);
 }
 
 export function isFlatStack(s: Project["stack"]): s is string[] {
@@ -95,7 +87,7 @@ export default async function ProjectPage({
   return (
     <article className="mx-auto xl:py-10">
       {/* 헤더 */}
-      <header className="mb-6 md:mb-20 flex flex-col lg:gap-2">
+      <header className="mb-6 md:mb-20 flex flex-col lg:gap-2 dark:invert">
         <h1 className="text-2xl font-bold text-neutral-900 md:text-4xl xl:text-5xl">
           {title}
         </h1>
@@ -107,9 +99,9 @@ export default async function ProjectPage({
       </header>
 
       {/* 메타 + 소개 레이아웃 */}
-      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2 dark:invert">
         {/* 소개(왼쪽, 데스크탑에서 1번째) */}
-        <section className="space-y-4 order-2 lg:order-1 prose prose-neutral dark:prose-invert">
+        <section className="space-y-4 order-2 lg:order-1 prose prose-neutral">
           {about && (
             <div className="flex flex-col gap-2">
               <h2 className={subTitleStyle}>About the Service</h2>
@@ -252,10 +244,10 @@ export default async function ProjectPage({
       </div>
 
       {/* 돌아가기 */}
-      <div className="mt-24 md:mt-28 lg:mt-32 xl:mt-36 mx-12 flex justify-center text-neutral-800">
+      <div className="mt-24 md:mt-28 lg:mt-32 xl:mt-36 mx-12 flex justify-center text-neutral-800 dark:invert">
         <Link
           href="/projects"
-          className={`${contentStyle} border border-neutral-200 rounded-full hover:bg-neutral-100 px-8 md:px-12 py-2`}
+          className={`${contentStyle} border border-neutral-200 rounded-full hover:bg-neutral-100 px-8 md:px-12 py-2 dark:bg-neutral-200`}
         >
           프로젝트 목록으로
         </Link>
