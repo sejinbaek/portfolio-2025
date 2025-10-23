@@ -8,7 +8,7 @@ const anton = Anton({
   display: "swap",
 });
 
-export default function Hero() {
+export default function HeroSection() {
   const shapeStyle =
     "w-8 h-8 min-[350px]:w-10 min-[350px]:h-10 xl:w-14 xl:h-14";
   const textStyle = "text-white text-stroke dark:text-stroke-none";
@@ -34,9 +34,11 @@ export default function Hero() {
           <div className="relative hidden lg:block h-auto overflow-hidden">
             <Image
               src="/hero/flower.webp"
-              alt="히어로 이미지"
+              alt=""
               width={1000}
               height={176}
+              priority
+              fetchPriority="high"
               className="lg:w-[450px] lg:h-[80px] xl:w-[600px] xl:h-[110px]"
               aria-hidden="true"
             />
