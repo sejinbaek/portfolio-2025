@@ -108,9 +108,9 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col items-center lg:items-start gap-4 lg:gap-6">
-            <h4 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
+            <h2 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
               My Skills
-            </h4>
+            </h2>
             <div className="flex flex-wrap justify-center md:px-10 lg:px-0 lg:justify-start gap-2 lg:gap-3">
               {skills.map((skill) => (
                 <SkillBadge
