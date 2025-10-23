@@ -31,8 +31,8 @@ export default function ContactPage() {
       <div
         className="w-full max-w-5xl mx-auto
             flex flex-col items-center
-            md:flex-row md:justify-center
-            gap-14 md:gap-20 lg:gap-32"
+            lg:flex-row lg:justify-center
+            gap-14 md:gap-28 lg:gap-32"
       >
         <GetInTouch email={contact.email} />
         <ContactForm />
