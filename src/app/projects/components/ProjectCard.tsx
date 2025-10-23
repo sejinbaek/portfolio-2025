@@ -2,13 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Project } from "../data/project";
 
-export default function ProjectCard({
-  project,
-  priority = false,
-}: {
-  project: Project;
-  priority?: boolean;
-}) {
+export default function ProjectCard({ project }: { project: Project }) {
   const { slug, cover, title, subtitle, description } = project;
   return (
     <article>
@@ -26,7 +20,6 @@ export default function ProjectCard({
             sizes="(min-width:1280px) 380px,
                    (min-width:1024px) 300px,
                    (min-width:768px) 328px, calc(100vw-40px)"
-            priority={priority} // 첫 카드만 true
           />
         </div>
       </Link>

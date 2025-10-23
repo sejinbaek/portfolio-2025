@@ -215,7 +215,6 @@ export default async function ProjectPage({
                          (min-width:1024px) 944px,
                          (min-width:768px) 688px, 100vw"
                   quality={90}
-                  priority={i === 0}
                   className="object-contain"
                 />
               </div>
