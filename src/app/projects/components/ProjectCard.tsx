@@ -23,7 +23,9 @@ export default function ProjectCard({
             alt={cover.alt || title}
             fill
             className="object-cover transform-gpu will-change-transform transition-transform duration-500 ease-[cubic-bezier(.5,.8,.2,1)] hover:scale-105"
-            sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
+            sizes="(min-width:1280px) 380px,
+                   (min-width:1024px) 300px,
+                   (min-width:768px) 328px, calc(100vw-40px)"
             priority={priority} // 첫 카드만 true
           />
         </div>

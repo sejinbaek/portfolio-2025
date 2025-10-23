@@ -122,7 +122,7 @@ export const projects: Record<string, Project> = {
   umate: {
     slug: "umate",
     cover: {
-      src: "/projects/umate/u_mate-cover.webp",
+      src: "/projects/umate/u_mate-cover-2.webp",
       alt: "유메이트 커버 이미지",
     },
     title: "U: mate",
