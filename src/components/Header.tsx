@@ -90,9 +90,10 @@ export default function Header() {
         />
 
         {/* 모바일 드로어 패널 (오른쪽에서 슬라이드) */}
-        <aside
+        <div
           id={menuId}
           role="dialog"
+          aria-modal="true"
           aria-labelledby="mobileMenuTitle"
           className={clsx(
             "fixed right-0 top-0 z-[60] h-full w-full bg-white shadow-xl md:hidden",
@@ -135,7 +136,7 @@ export default function Header() {
               </li>
             ))}
           </ul>
-        </aside>
+        </div>
       </div>
     </header>
   );

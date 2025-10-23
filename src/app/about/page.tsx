@@ -90,9 +90,9 @@ export default function AboutPage() {
         </div>
         <div className="flex flex-col items-center gap-8 lg:gap-14">
           <div className="flex flex-col items-center lg:items-start w-full gap-4 lg:gap-6">
-            <h4 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
+            <h2 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
               Links
-            </h4>
+            </h2>
             <div className="grid grid-cols-2 gap-2 lg:flex lg:gap-4">
               {contact.resume && (
                 <LinkButton href={contact.resume.href} download>
