@@ -78,32 +78,30 @@ export default function HeroSection() {
           <p className={clsx(anton.className, textStyle)}>SEJIN BAEK</p>
 
           {/* 6. 회색 도형(장식) */}
-          <div className="flex justify-center" aria-hidden>
-            <svg
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              fill="currentColor"
-              aria-hidden="true"
-              className={clsx(shapeStyle, "text-neutral-300")}
-            >
-              {/* 가운데 원 */}
-              <circle cx="12" cy="12" r="6.5" />
-              {/* 둘레의 둥근 스캘럽(12개) */}
-              <circle cx="19" cy="12" r="3.5" />
-              <circle cx="18.062" cy="15.5" r="3.5" />
-              <circle cx="15.5" cy="18.062" r="3.5" />
-              <circle cx="12" cy="19" r="3.5" />
-              <circle cx="8.5" cy="18.062" r="3.5" />
-              <circle cx="5.938" cy="15.5" r="3.5" />
-              <circle cx="5" cy="12" r="3.5" />
-              <circle cx="5.938" cy="8.5" r="3.5" />
-              <circle cx="8.5" cy="5.938" r="3.5" />
-              <circle cx="12" cy="5" r="3.5" />
-              <circle cx="15.5" cy="5.938" r="3.5" />
-              <circle cx="18.062" cy="8.5" r="3.5" />
-            </svg>
-          </div>
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="currentColor"
+            aria-hidden="true"
+            className={clsx(shapeStyle, "text-neutral-300")}
+          >
+            {/* 가운데 원 */}
+            <circle cx="12" cy="12" r="6.5" />
+            {/* 둘레의 둥근 스캘럽(12개) */}
+            <circle cx="19" cy="12" r="3.5" />
+            <circle cx="18.062" cy="15.5" r="3.5" />
+            <circle cx="15.5" cy="18.062" r="3.5" />
+            <circle cx="12" cy="19" r="3.5" />
+            <circle cx="8.5" cy="18.062" r="3.5" />
+            <circle cx="5.938" cy="15.5" r="3.5" />
+            <circle cx="5" cy="12" r="3.5" />
+            <circle cx="5.938" cy="8.5" r="3.5" />
+            <circle cx="8.5" cy="5.938" r="3.5" />
+            <circle cx="12" cy="5" r="3.5" />
+            <circle cx="15.5" cy="5.938" r="3.5" />
+            <circle cx="18.062" cy="8.5" r="3.5" />
+          </svg>
 
           {/* 7. PORTFOLIO */}
           <p className={clsx(anton.className, textStyle)}>PORTFOLIO</p>
