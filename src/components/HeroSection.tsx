@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Anton } from "next/font/google";
 import clsx from "clsx";
@@ -21,13 +20,15 @@ export default function Hero() {
     >
       <div
         className={clsx(
-          anton.className,
           "flex flex-col justify-center w-full mx-auto text-center space-y-4 text-4xl min-[350px]:text-6xl md:text-8xl xl:text-9xl text-neutral-800 dark:text-white"
         )}
       >
         <div className="flex items-center justify-center lg:justify-between">
           {/* 1. CREATIVE */}
-          <h1 id="hero-title" className={clsx(textStyle, "mb-2 lg:mb-0")}>
+          <h1
+            id="hero-title"
+            className={clsx(anton.className, textStyle, "mb-2 lg:mb-0")}
+          >
             CREATIVE
           </h1>
           <div className="relative hidden lg:block h-auto overflow-hidden">
@@ -63,7 +64,12 @@ export default function Hero() {
             </svg>
           </div>
           {/* 3. FRONTEND / 4. DEVELOPER — 채움(볼드) */}
-          <p className="leading-normal">
+          <p
+            className={clsx(
+              anton.className,
+              "leading-normal font-semibold tracking-[-0.01em]"
+            )}
+          >
             FRONTEND <br className="block lg:hidden" />
             DEVELOPER
           </p>
@@ -71,7 +77,7 @@ export default function Hero() {
 
         <div className="flex flex-col mt-6 lg:mt-0 lg:flex-row gap-4 md:gap-8 lg:gap-4 lg:items-center">
           {/* 5. SEJIN BAEK */}
-          <p className={textStyle}>SEJIN BAEK</p>
+          <p className={clsx(anton.className, textStyle)}>SEJIN BAEK</p>
 
           {/* 6. 회색 도형(장식) */}
           <div className="flex justify-center" aria-hidden>
@@ -102,7 +108,7 @@ export default function Hero() {
           </div>
 
           {/* 7. PORTFOLIO */}
-          <p className={textStyle}>PORTFOLIO</p>
+          <p className={clsx(anton.className, textStyle)}>PORTFOLIO</p>
         </div>
       </div>
     </section>
