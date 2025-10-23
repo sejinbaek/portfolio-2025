@@ -59,6 +59,8 @@ export default function Accordion({
                   <svg
                     viewBox="0 0 24 24"
                     className="size-4 md:size-5 lg:size-6"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <path
                       d="M5 12h14"
@@ -71,6 +73,8 @@ export default function Accordion({
                   <svg
                     viewBox="0 0 24 24"
                     className="size-4 md:size-5 lg:size-6"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <path
                       d="M12 5v14M5 12h14"
