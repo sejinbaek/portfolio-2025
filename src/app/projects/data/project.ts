@@ -2,7 +2,7 @@ export type Inline = string | { mark: "red" | "blue"; text: string };
 export type Paragraph = { children: Inline[] };
 export type List = { items: Inline[][] };
 
-export type RichSectionData = {
+export type InsightSectionData = {
   title: string;
   content: Paragraph[];
   impact?: "low" | "medium" | "high";
@@ -31,8 +31,8 @@ export type Project = {
     alt: string;
   }[];
 
-  performance?: RichSectionData[];
-  troubleshooting?: RichSectionData[];
+  performance?: InsightSectionData[];
+  troubleshooting?: InsightSectionData[];
 };
 
 export type GroupedStackItem = { label: string; items: string[] };
@@ -211,9 +211,9 @@ export const projects: Record<string, Project> = {
         content: [
           {
             children: [
-              "요금제 페이지에 있는 필터 모달에서 필터 변경 시",
+              "요금제 페이지에 있는 필터 모달에서 필터 변경 시 ",
               {
-                mark: "red",
+                mark: "blue",
                 text: "짧은 시간에 여러 번 요청하는 것을 방지하기 위해 useDebounce(300ms)를 적용해 단일 요청만 보내도록 구성",
               },
               "했습니다. 미선택 시 빈 조건 요청 자체를 차단하고, 모달을 닫을 때는 화면에 표시된 결과 수를 현재 목록 길이와 동기화해 불필요한 재조회가 발생하지 않도록 했습니다.",
@@ -232,12 +232,12 @@ export const projects: Record<string, Project> = {
           {
             children: [
               {
-                mark: "red",
+                mark: "blue",
                 text: "초기 진입 시 visibleCount를 적용해 요금제 카드 6개만 우선 렌더링",
               },
               "하고, 사용자가 요청할 때마다 “더보기”로 항목을 점진적으로 렌더링하도록 설계했습니다. 또한 모달·배너 등 부가 컴포넌트는 ",
               {
-                mark: "red",
+                mark: "blue",
                 text: "조건부 렌더링으로 초기 트리에서 제외",
               },
               "해 불필요한 DOM 마운트와 자바스크립트 실행을 줄였습니다.",
@@ -256,19 +256,19 @@ export const projects: Record<string, Project> = {
         content: [
           {
             children: [
-              "카드 목록의 렌더링 비용을 줄이기 위해 PlanCard에",
+              "카드 목록의 렌더링 비용을 줄이기 위해 PlanCard에 ",
               {
-                mark: "red",
+                mark: "blue",
                 text: "React.memo를 적용해 변경 없는 항목의 리렌더링을 방지",
               },
               "했습니다. 하위로 전달되는 이벤트 핸들러는 ",
               {
-                mark: "red",
+                mark: "blue",
                 text: "useCallback으로 레퍼런스 안정화를 적용해 매 렌더링마다 함수가 새로 생성되지 않게 했고, ",
               },
               "rating 등 객체형 프롭은 원시값으로 분해해 참조 변경으로 인한 불필요한 업데이트를 차단했습니다. 추가로 ",
               {
-                mark: "red",
+                mark: "blue",
                 text: "정렬 결과는 useMemo로 캐싱해 동일 조건에서 재계산을 피했습니다.",
               },
             ],
@@ -418,10 +418,10 @@ export const projects: Record<string, Project> = {
         content: [
           {
             children: [
-              { mark: "red", text: "전 페이지 이미지에 WebP 포맷을 적용" },
+              { mark: "blue", text: "전 페이지 이미지에 WebP 포맷을 적용" },
               "하여 용량을 크게 줄이고, 페이지 전반의 로딩 속도를 효율적으로 단축시켰습니다. 또한 ",
               {
-                mark: "red",
+                mark: "blue",
                 text: "랜딩 페이지의 섹션 및 주요 이미지에는 Lazy Loading 기법을 적용",
               },
               "해 화면 진입 시 필요한 요소만 우선적으로 렌더링되도록 구성했습니다.",
@@ -441,8 +441,8 @@ export const projects: Record<string, Project> = {
             children: [
               "메인 페이지 주요 기능 중 하나인 잇플AI 추천 탭은 사용자에게 자연스럽게 눈에 띄도록 시각적 강조가 필요했습니다. 다른 탭과 차별화된 인터랙션을 적용해 주목도를 높이고, 사용자가 추천 기능을 직관적으로 인식할 수 있도록 하였습니다.",
               {
-                mark: "red",
-                text: "GSAP을 활용해 부드럽고 자연스러운 애니메이션을 구현",
+                mark: "blue",
+                text: " GSAP을 활용해 부드럽고 자연스러운 애니메이션을 구현",
               },
               "했으며, ‘잇플AI 추천’ 탭에는 둥둥 떠 있는 듯한 부유(hovering) 효과를 적용해 시각적 생동감을 더했습니다.",
             ],
@@ -460,7 +460,7 @@ export const projects: Record<string, Project> = {
           {
             children: [
               {
-                mark: "red",
+                mark: "blue",
                 text: "이벤트 모달이 화면에 등장할 때 부드러운 페이드 & 스케일 인(Fade & Scale In) 애니메이션을 적용",
               },
               "해, 사용자의 시선을 자연스럽게 집중시키고 이벤트 참여 경험을 더욱 몰입감 있게 구성했습니다. 단순한 정보 전달이 아닌 시각적 피드백 중심의 인터랙션을 통해 이벤트 기능의 주목도와 접근성을 함께 높였습니다.",
@@ -480,10 +480,10 @@ export const projects: Record<string, Project> = {
           },
           {
             children: [
-              "이를 해결하기 위해 pin이 적용된 Feature 섹션과 Video 섹션의 ScrollTrigger에",
-              { mark: "blue", text: "refreshPriority: -1 " },
-              "옵션을 적용하여, 두 섹션의 refresh 순서를 뒤로 미뤄 순차적으로 계산되도록 조정하여 상단 섹션의 계산이 먼저 완료된 뒤 하단 섹션이 안정적으로 갱신되도록 했습니다. 또한",
-              { mark: "blue", text: "invalidateOnRefresh: true" },
+              "이를 해결하기 위해 pin이 적용된 Feature 섹션과 Video 섹션의 ScrollTrigger에 ",
+              { mark: "red", text: "refreshPriority: -1 " },
+              "옵션을 적용하여, 두 섹션의 refresh 순서를 뒤로 미뤄 순차적으로 계산되도록 조정하여 상단 섹션의 계산이 먼저 완료된 뒤 하단 섹션이 안정적으로 갱신되도록 했습니다. 또한 ",
+              { mark: "red", text: "invalidateOnRefresh: true" },
               "를 함께 설정하여 리사이즈 시 start와 end 값이 항상 최신 상태로 재계산되도록 보장했습니다.",
             ],
           },
@@ -504,9 +504,9 @@ export const projects: Record<string, Project> = {
           },
           {
             children: [
-              "이를 해결하기 위해 ScrollTrigger의",
+              "이를 해결하기 위해 ScrollTrigger의 ",
               {
-                mark: "blue",
+                mark: "red",
                 text: "onUpdate 콜백을 활용해 스크롤 방향(self.direction)과 진행도(self.progress)를 실시간 감지하도록 수정",
               },
               "했습니다. 스크롤 방향이 아래일 때(direction === 1)는 비디오를 재생하고, 위로 이동할 때(direction === -1)는 일시정지하도록 조건을 분리해 양방향 스크롤에서도 정확하게 반응하도록 구현했습니다.",

@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import type { Project } from "../data/project";
 import { GroupedStackItem } from "../data/project";
 import { projects } from "../data/project";
+import InsightSections from "../components/InsightSections";
 
 // 슬러그로 프로젝트 찾기
 function getProject(slug: string): Project | undefined {
@@ -21,11 +22,11 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params; // <-- 반드시 await
+  const { slug } = await params;
   const p = getProject(slug);
   if (!p) return { title: "Project" };
   return {
-    title: `${p.title} – Projects`,
+    title: `${p.title} - Projects`,
     description: p.description,
     openGraph: {
       title: p.title,
@@ -84,6 +85,8 @@ export default async function ProjectPage({
     features,
     implementation,
     screenshots,
+    performance,
+    troubleshooting,
   } = p;
 
   const subTitleStyle = "font-medium text-neutral-400 text-base md:text-xl";
@@ -168,7 +171,7 @@ export default async function ProjectPage({
                 <ul className="mt-1 space-y-4">
                   {stack.map((g, i) => (
                     <li key={i} className={contentStyle}>
-                      <p className={`{contentStyle} text-neutral-400`}>
+                      <p className={`${contentStyle} text-neutral-400`}>
                         {g.label}{" "}
                       </p>
                       <p className={contentStyle}>{g.items.join(" · ")}</p>
@@ -228,9 +231,28 @@ export default async function ProjectPage({
           ))}
         </section>
       )}
+      <div>
+        <p className="text-red-500 text-xs md:text-sm lg:text-base mt-12 mb-2 md:mt-20 lg:mt-28">
+          * 본 항목의 내용은 담당한 영역에 한정됩니다.
+        </p>
+        <div className="flex flex-col gap-12 md:gap-16 lg:gap-20 xl:gap-24">
+          {Array.isArray(performance) && performance.length > 0 && (
+            <InsightSections
+              heading="Web Performance Optimization"
+              sections={performance}
+            />
+          )}
+          {Array.isArray(troubleshooting) && troubleshooting.length > 0 && (
+            <InsightSections
+              heading="Troubleshooting"
+              sections={troubleshooting}
+            />
+          )}
+        </div>
+      </div>
 
       {/* 돌아가기 */}
-      <div className="mt-16 md:mt-20 lg:mt-24 xl:mt-28 mx-12 flex justify-center text-neutral-800">
+      <div className="mt-24 md:mt-28 lg:mt-32 xl:mt-36 mx-12 flex justify-center text-neutral-800">
         <Link
           href="/projects"
           className={`${contentStyle} border border-neutral-200 rounded-full hover:bg-neutral-100 px-8 md:px-12 py-2`}

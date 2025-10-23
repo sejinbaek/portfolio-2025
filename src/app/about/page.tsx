@@ -5,6 +5,7 @@ import LinkButton from "./components/LinkButton";
 import { contact, skills, aboutSections } from "../config/site";
 import SkillBadge from "./components/SkillBadge";
 import Accordion from "./components/Accordion";
+import { Metadata } from "next";
 
 export default function AboutPage() {
   const labelMap: Record<string, string> = {
