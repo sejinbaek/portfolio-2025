@@ -31,15 +31,15 @@ export default function HeroSection() {
           >
             CREATIVE
           </h1>
-          <div className="relative hidden lg:block h-auto overflow-hidden">
+          <div className="relative hidden lg:block lg:w-[470px] xl:w-[620px] aspect-[250/44] overflow-hidden">
             <Image
               src="/hero/flower.webp"
               alt=""
-              width={1000}
-              height={176}
+              fill
               priority
               fetchPriority="high"
-              className="lg:w-[450px] lg:h-[80px] xl:w-[600px] xl:h-[110px]"
+              sizes="(min-width:1280px) 600px, 450px"
+              className="object-contain"
               aria-hidden="true"
             />
           </div>
