@@ -74,7 +74,7 @@ export default function ContactForm() {
             name="message"
             required
             className="w-full h-24 rounded-lg text-sm min-[400px]:text-base lg:text-xl bg-white border border-neutral-200 p-3 resize-none
-                 focus:outline-none focus:border-neutral-800 focus:border-2"
+                 focus:outline-none focus:border-neutral-800 focus:border-2 dark:text-neutral-800"
           />
         </div>
 
