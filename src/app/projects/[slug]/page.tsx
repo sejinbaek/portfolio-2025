@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "../data/project";
-import type { Project } from "../data/project";
 import { Metadata } from "next";
+import type { Project } from "../data/project";
+import { GroupedStackItem } from "../data/project";
+import { projects } from "../data/project";
 
 // 슬러그로 프로젝트 찾기
 function getProject(slug: string): Project | undefined {
@@ -34,6 +35,21 @@ export async function generateMetadata({
   };
 }
 
+export function isFlatStack(s: Project["stack"]): s is string[] {
+  return Array.isArray(s) && (s.length === 0 || typeof s[0] === "string");
+}
+
+export function isGroupedStack(s: Project["stack"]): s is GroupedStackItem[] {
+  return (
+    Array.isArray(s) &&
+    s.length > 0 &&
+    typeof s[0] === "object" &&
+    s[0] !== null &&
+    // 'items' in s[0] 만으로도 되지만 hasOwnProperty가 더 엄격
+    Object.prototype.hasOwnProperty.call(s[0], "items")
+  );
+}
+
 export default async function ProjectPage({
   params,
 }: {
@@ -59,7 +75,6 @@ export default async function ProjectPage({
   const {
     title,
     subtitle,
-    description,
     period,
     team,
     role,
@@ -71,37 +86,38 @@ export default async function ProjectPage({
     screenshots,
   } = p;
 
-  const subTitleStyle = "font-medium text-neutral-400 text-base";
-  const contentStyle = "text-base";
+  const subTitleStyle = "font-medium text-neutral-400 text-base md:text-xl";
+  const contentStyle = "text-base md:text-lg text-neutral-800";
 
   return (
-    <article className="mx-auto md:py-10">
+    <article className="mx-auto xl:py-10">
       {/* 헤더 */}
-      <header className="mb-6">
-        <h1 className="text-2xl font-bold text-neutral-900 md:text-3xl">
+      <header className="mb-6 md:mb-20 flex flex-col lg:gap-2">
+        <h1 className="text-2xl font-bold text-neutral-900 md:text-4xl xl:text-5xl">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-1 text-base text-neutral-600">{subtitle}</p>
+          <p className="mt-1 text-base md:text-lg xl:text-xl text-neutral-400">
+            {subtitle}
+          </p>
         )}
       </header>
 
       {/* 메타 + 소개 레이아웃 */}
-      <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
         {/* 소개(왼쪽, 데스크탑에서 1번째) */}
-        <section className="space-y-4 order-2 md:order-1 prose prose-neutral dark:prose-invert">
-          {description && (
+        <section className="space-y-4 order-2 lg:order-1 prose prose-neutral dark:prose-invert">
+          {about && (
             <div className="flex flex-col gap-2">
               <h2 className={subTitleStyle}>About the Service</h2>
-              <p className={contentStyle}>{description}</p>
+              <p className={contentStyle}>{about}</p>
             </div>
           )}
-          {about && <p className="whitespace-pre-wrap">{about}</p>}
           {features && features.length > 0 && (
             <>
               <ul className="list-disc pl-5 space-y-1 marker:text-neutral-400">
                 {features.map((feature) => (
-                  <li key={feature} className="">
+                  <li key={feature} className={contentStyle}>
                     {feature}
                   </li>
                 ))}
@@ -113,7 +129,9 @@ export default async function ProjectPage({
               <h3 className={subTitleStyle}>Frontend Implementation</h3>
               <ul className="space-y-4">
                 {implementation.map((line, i) => (
-                  <li key={i}>{line}</li>
+                  <li key={i} className={contentStyle}>
+                    {line}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -121,7 +139,7 @@ export default async function ProjectPage({
         </section>
 
         {/* 메타(오른쪽, 데스크탑에서 2번째) */}
-        <section className="order-1 md:order-2 flex flex-col gap-2 mb-6 text-neutral-700 md:sticky md:top-20 lg:pl-40">
+        <section className="order-1 lg:order-2 flex flex-col gap-4 lg:gap-8 mb-6 text-neutral-700 lg:sticky lg:top-20 lg:pl-20 xl:pl-40">
           {period && (
             <div>
               <h4 className={subTitleStyle}>Date</h4>
@@ -140,10 +158,24 @@ export default async function ProjectPage({
               <p className={contentStyle}>{role}</p>
             </div>
           )}
-          {stack && stack.length > 0 && (
+          {Array.isArray(stack) && stack.length > 0 && (
             <div>
               <h4 className={subTitleStyle}>Stack</h4>
-              <p className={contentStyle}>{stack.join(" · ")}</p>
+
+              {isFlatStack(stack) ? (
+                <p className={contentStyle}>{stack.join(" · ")}</p>
+              ) : isGroupedStack(stack) ? (
+                <ul className="mt-1 space-y-4">
+                  {stack.map((g, i) => (
+                    <li key={i} className={contentStyle}>
+                      <p className={`{contentStyle} text-neutral-400`}>
+                        {g.label}{" "}
+                      </p>
+                      <p className={contentStyle}>{g.items.join(" · ")}</p>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
           )}
           {links && links.length > 0 && (
@@ -172,7 +204,7 @@ export default async function ProjectPage({
 
       {/* 스크린샷 갤러리 */}
       {screenshots && screenshots.length > 0 && (
-        <section className="mt-8 space-y-4">
+        <section className="mt-8 space-y-4 md:mt-10 md:space-y-10 lg:mt-12 lg:space-y-16">
           {screenshots.map((screenshot, i) => (
             <figure
               key={`${screenshot.src}-${i}`}
@@ -183,8 +215,13 @@ export default async function ProjectPage({
                   src={screenshot.src}
                   alt={screenshot.alt}
                   fill
-                  sizes="(min-width:1024px) 960px, 100vw"
-                  className="object-cover"
+                  sizes="(min-width:1536px) 1200px, 
+                         (min-width:1280px) 1200px,
+                         (min-width:1024px) 944px,
+                         (min-width:768px) 688px, 100vw"
+                  quality={90}
+                  priority={i === 0}
+                  className="object-contain"
                 />
               </div>
             </figure>
@@ -193,8 +230,11 @@ export default async function ProjectPage({
       )}
 
       {/* 돌아가기 */}
-      <div className="mt-10 mx-12 flex justify-center text-neutral-800 hover:underline">
-        <Link href="/projects" className="">
+      <div className="mt-16 md:mt-20 lg:mt-24 xl:mt-28 mx-12 flex justify-center text-neutral-800">
+        <Link
+          href="/projects"
+          className={`${contentStyle} border border-neutral-200 rounded-full hover:bg-neutral-100 px-8 md:px-12 py-2`}
+        >
           프로젝트 목록으로
         </Link>
       </div>
