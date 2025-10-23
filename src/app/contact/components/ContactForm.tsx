@@ -30,7 +30,7 @@ export default function ContactForm() {
   };
 
   const textBaseStyle =
-    "font-light w-full bg-transparent text-sm min-[400px]:text-base lg:text-xl placeholder:text-neutral-400 border-0 border-b outline-none focus:outline-none focus:border-b-2 border-neutral-300 focus:border-neutral-700 focus:ring-0 dark:text-neutral-800";
+    "w-full bg-transparent text-sm min-[400px]:text-base lg:text-xl placeholder:text-neutral-400 border-0 border-b outline-none focus:outline-none focus:border-b-2 border-neutral-300 focus:border-neutral-700 focus:ring-0 dark:text-neutral-800";
 
   return (
     <div className="min-[400px]:w-xs md:w-96 lg:w-128 xl:w-xl rounded-2xl bg-neutral-100 p-8 lg:p-10">
@@ -65,7 +65,7 @@ export default function ContactForm() {
         <div className="space-y-1">
           <label
             htmlFor="message"
-            className="block text-sm min-[400px]:text-base lg:text-xl font-light text-neutral-800"
+            className="block text-sm min-[400px]:text-base lg:text-xl text-neutral-800"
           >
             Message
           </label>
