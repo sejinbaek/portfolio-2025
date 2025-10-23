@@ -1,8 +1,17 @@
-"use client";
 import SectionHeader from "../../components/SectionHeader";
+import { pageMetadata } from "../../lib/seo";
+import { contact } from "@/app/config/site";
 import ContactForm from "./components/ContactForm";
 import GetInTouch from "./components/GetInTouch";
-import { contact } from "@/app/config/site";
+
+export const generateMetadata = () =>
+  pageMetadata({
+    title: "Contact",
+    description: "연락하기",
+    path: "/contact",
+    image: "/og/contact-og.png",
+    type: "website",
+  });
 
 export default function ContactPage() {
   return (

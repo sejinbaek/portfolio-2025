@@ -1,7 +1,16 @@
-"use client";
 import SectionHeader from "../../components/SectionHeader";
 import ProjectList from "./components/ProjectList";
 import { projects } from "../projects/data/project";
+import { pageMetadata } from "../../lib/seo";
+
+export const generateMetadata = () =>
+  pageMetadata({
+    title: "Projects",
+    description: "진행한 프로젝트 모음",
+    path: "/projects",
+    image: "/og/projects-og.png",
+    type: "website",
+  });
 
 export default function ProjectPage() {
   return (

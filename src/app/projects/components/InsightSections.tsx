@@ -24,10 +24,10 @@ const ParagraphView = ({ p }: { p: Paragraph }) =>
 function InsightSection({ data }: { data: InsightSectionData }) {
   return (
     <div className="relative pl-5">
-      <span className="absolute left-0 top-[-1px] text-neutral-800 text-base md:text-lg">
+      <span className="absolute left-0 top-[-1px] text-neutral-800 text-base md:text-lg dark:invert">
         •
       </span>
-      <h3 className="font-semibold text-neutral-800 text-base md:text-lg lg:text-xl">
+      <h3 className="font-semibold text-neutral-800 text-base md:text-lg lg:text-xl dark:invert">
         {data.title}
       </h3>
       <div className="mt-2 space-y-4">
@@ -49,7 +49,7 @@ export default function InsightSections({
   if (!sections?.length) return null;
   return (
     <section>
-      <h2 className="font-semibold text-neutral-800 text-xl md:text-3xl mb-4">
+      <h2 className="font-semibold text-neutral-800 text-xl md:text-3xl mb-4 dark:invert">
         {heading}
       </h2>
       <div className="space-y-8 xl:space-y-12">

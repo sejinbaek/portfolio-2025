@@ -1,11 +1,19 @@
-"use client";
 import Image from "next/image";
+import { contact, skills, aboutSections } from "../config/site";
 import SectionHeader from "../../components/SectionHeader";
 import LinkButton from "./components/LinkButton";
-import { contact, skills, aboutSections } from "../config/site";
 import SkillBadge from "./components/SkillBadge";
 import Accordion from "./components/Accordion";
-import { Metadata } from "next";
+import { pageMetadata } from "../../lib/seo";
+
+export const generateMetadata = () =>
+  pageMetadata({
+    title: "About",
+    description: "진행한 프로젝트 모음",
+    path: "/about",
+    image: "/og/about-og.png",
+    type: "website",
+  });
 
 export default function AboutPage() {
   const labelMap: Record<string, string> = {
