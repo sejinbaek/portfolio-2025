@@ -224,9 +224,12 @@ export default async function ProjectPage({
         </section>
       )}
       <div>
-        <p className="text-red-500 text-xs md:text-sm lg:text-base mt-12 mb-2 md:mt-20 lg:mt-28">
-          * 본 항목의 내용은 담당한 영역에 한정됩니다.
-        </p>
+        {slug !== "jobthoughts" && (
+          <p className="text-red-500 text-xs md:text-sm lg:text-base mt-12 mb-2 md:mt-20 lg:mt-28">
+            * 본 항목의 내용은 담당한 영역에 한정됩니다.
+          </p>
+        )}
+
         <div className="flex flex-col gap-12 md:gap-16 lg:gap-20 xl:gap-24">
           {Array.isArray(performance) && performance.length > 0 && (
             <InsightSections
