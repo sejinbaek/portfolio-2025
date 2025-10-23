@@ -36,8 +36,6 @@ export default function HeroSection() {
               src="/hero/flower.webp"
               alt=""
               fill
-              priority
-              fetchPriority="high"
               sizes="(min-width:1280px) 600px, 450px"
               className="object-contain"
               aria-hidden="true"
