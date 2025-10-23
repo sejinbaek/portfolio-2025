@@ -55,39 +55,31 @@ export default function Accordion({
                 {sec.label}
 
                 {/* + / − 아이콘 */}
-                <span
-                  aria-hidden
-                  className={clsx(
-                    "grid size-6 place-items-center transition-colors",
-                    isOpen ? "border-white" : "border-neutral-400"
-                  )}
-                >
-                  {isOpen ? (
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="size-4 md:size-5 lg:size-6"
-                    >
-                      <path
-                        d="M5 12h14"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="size-4 md:size-5 lg:size-6"
-                    >
-                      <path
-                        d="M12 5v14M5 12h14"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  )}
-                </span>
+                {isOpen ? (
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="size-4 md:size-5 lg:size-6"
+                  >
+                    <path
+                      d="M5 12h14"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="size-4 md:size-5 lg:size-6"
+                  >
+                    <path
+                      d="M12 5v14M5 12h14"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                )}
               </button>
             </h3>
 
