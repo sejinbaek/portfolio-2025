@@ -15,7 +15,7 @@ export const generateMetadata = () =>
 
 export default function ContactPage() {
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-10 md:gap-20">
+    <div className="w-full flex flex-col justify-center items-center gap-16 md:gap-20">
       <SectionHeader
         title="CONTACT"
         subtitle={
@@ -32,7 +32,7 @@ export default function ContactPage() {
         className="w-full max-w-5xl mx-auto
             flex flex-col items-center
             lg:flex-row lg:justify-center
-            gap-14 md:gap-28 lg:gap-32"
+            gap-20 md:gap-28 lg:gap-32"
       >
         <GetInTouch email={contact.email} />
         <ContactForm />
