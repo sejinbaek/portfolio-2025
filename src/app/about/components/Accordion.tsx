@@ -112,7 +112,7 @@ export default function Accordion({
                   {sec.rows.map((r, idx) => (
                     <li
                       key={idx}
-                      className="flex flex-col md:flex-row xl:gap-20"
+                      className="flex flex-col md:flex-row xl:gap-20 md:pl-2 lg:pl-0"
                     >
                       {/* 기간 */}
                       <div

@@ -208,7 +208,7 @@ export default async function ProjectPage({
           {screenshots.map((screenshot, i) => (
             <figure
               key={`${screenshot.src}-${i}`}
-              className="overflow-hidden rounded-xl"
+              className="overflow-hidden rounded-lg md:rounded-xl"
             >
               <div className="relative aspect-[16/9] bg-neutral-100">
                 <Image
