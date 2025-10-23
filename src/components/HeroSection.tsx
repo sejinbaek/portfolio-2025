@@ -45,24 +45,22 @@ export default function HeroSection() {
 
         <div className="flex flex-col lg:flex-row gap-2 items-center lg:justify-between">
           {/* 2. 장식 아이콘 */}
-          <div className="flex justify-center" aria-hidden>
-            <svg
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              fill="currentColor"
-              aria-hidden="true"
-              className={shapeStyle}
-            >
-              <path
-                d="M12 2
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="currentColor"
+            aria-hidden="true"
+            className={shapeStyle}
+          >
+            <path
+              d="M12 2
            C 9.5 7.5, 7.5 9.5, 2 12
            C 7.5 14.5, 9.5 16.5, 12 22
            C 14.5 16.5, 16.5 14.5, 22 12
            C 16.5 9.5, 14.5 7.5, 12 2 Z"
-              />
-            </svg>
-          </div>
+            />
+          </svg>
           {/* 3. FRONTEND / 4. DEVELOPER — 채움(볼드) */}
           <p
             className={clsx(
@@ -75,7 +73,7 @@ export default function HeroSection() {
           </p>
         </div>
 
-        <div className="flex flex-col mt-6 lg:mt-0 lg:flex-row gap-4 md:gap-8 lg:gap-4 lg:items-center">
+        <div className="flex flex-col mt-6 lg:mt-0 lg:flex-row gap-4 md:gap-8 lg:gap-4 items-center">
           {/* 5. SEJIN BAEK */}
           <p className={clsx(anton.className, textStyle)}>SEJIN BAEK</p>
 
