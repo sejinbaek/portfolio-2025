@@ -95,7 +95,7 @@ export default function AboutPage() {
             </h4>
             <div className="grid grid-cols-2 gap-2 lg:flex lg:gap-4">
               {contact.resume && (
-                <LinkButton href={contact.resume.href}>
+                <LinkButton href={contact.resume.href} download>
                   {contact.resume.label ?? "이력서 보러가기"}
                 </LinkButton>
               )}
