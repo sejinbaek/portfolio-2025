@@ -53,9 +53,11 @@ export default function RootLayout({
     <html lang="ko" className={pretendard.variable}>
       <body className={pretendard.className}>
         <Header />
-        <Toaster position="top-center" />
-        <RouteMargin>{children}</RouteMargin>
+        <main id="main-content" tabIndex={-1}>
+          <RouteMargin>{children}</RouteMargin>
+        </main>
         <Footer />
+        <Toaster position="top-center" />
       </body>
     </html>
   );
