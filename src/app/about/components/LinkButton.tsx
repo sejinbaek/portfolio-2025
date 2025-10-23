@@ -1,10 +1,11 @@
-import Link from "next/link";
-
 type LinkButtonProps = {
   href: string;
   children: React.ReactNode;
   className?: string;
   ariaLabel?: string;
+  target?: React.HTMLAttributeAnchorTarget;
+  download?: boolean;
+  rel?: string;
 };
 
 export default function LinkButton({
@@ -12,6 +13,9 @@ export default function LinkButton({
   children,
   className = "",
   ariaLabel,
+  target = "_blank",
+  download,
+  rel,
 }: LinkButtonProps) {
   const base =
     "inline-flex items-center gap-2 pt-4 pb-3 px-3 rounded-xl min-[400px]:rounded-2xl text-xs min-[400px]:text-base xl:text-xl border border-neutral-200 text-neutral-800 transform-gpu transition duration-200 ease-out hover:-translate-y-1 hover:bg-neutral-100 [will-change:transform] dark:text-white";
@@ -38,15 +42,20 @@ export default function LinkButton({
     </span>
   );
 
+  const computedRel =
+    rel ?? (target === "_blank" ? "noopener noreferrer" : undefined);
+
   return (
-    <Link
+    <a
       href={href}
       aria-label={ariaLabel}
       target="_blank"
+      rel={computedRel}
       className={`${base} ${className}`}
+      download={download}
     >
       <span className="whitespace-nowrap break-keep">{children}</span>
       {ArrowIcon}
-    </Link>
+    </a>
   );
 }
