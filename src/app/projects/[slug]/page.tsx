@@ -81,25 +81,26 @@ export default async function ProjectPage({
     troubleshooting,
   } = p;
 
-  const subTitleStyle = "font-medium text-neutral-400 text-base md:text-xl";
-  const contentStyle = "text-base md:text-lg text-neutral-800";
+  const subTitleStyle =
+    "font-medium text-neutral-400 text-base md:text-xl dark:text-neutral-300";
+  const contentStyle = "text-base md:text-lg text-neutral-800 dark:text-white";
 
   return (
     <article className="mx-auto xl:py-10">
       {/* 헤더 */}
-      <header className="mb-6 md:mb-20 flex flex-col lg:gap-2 dark:invert">
-        <h1 className="text-2xl font-bold text-neutral-900 md:text-4xl xl:text-5xl">
+      <header className="mb-6 md:mb-20 flex flex-col lg:gap-2">
+        <h1 className="text-2xl font-bold text-neutral-900 md:text-4xl xl:text-5xl dark:text-white">
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-1 text-base md:text-lg xl:text-xl text-neutral-400">
+          <p className="mt-1 text-base md:text-lg xl:text-xl text-neutral-400 dark:text-neutral-300">
             {subtitle}
           </p>
         )}
       </header>
 
       {/* 메타 + 소개 레이아웃 */}
-      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2 dark:invert">
+      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
         {/* 소개(왼쪽, 데스크탑에서 1번째) */}
         <section className="space-y-4 order-2 lg:order-1 prose prose-neutral">
           {about && (
@@ -174,7 +175,7 @@ export default async function ProjectPage({
             </div>
           )}
           {links && links.length > 0 && (
-            <div className="mt-1 flex flex-wrap gap-4">
+            <div className="mt-1 flex flex-wrap gap-4 dark:invert">
               {links.map((link) => (
                 <Link
                   key={link.href}
@@ -246,10 +247,10 @@ export default async function ProjectPage({
       </div>
 
       {/* 돌아가기 */}
-      <div className="mt-24 md:mt-28 lg:mt-32 xl:mt-36 mx-12 flex justify-center text-neutral-800 dark:invert">
+      <div className="mt-24 md:mt-28 lg:mt-32 xl:mt-36 mx-12 flex justify-center text-neutral-800">
         <Link
           href="/projects"
-          className={`${contentStyle} border border-neutral-200 rounded-full hover:bg-neutral-100 px-8 md:px-12 py-2 dark:bg-neutral-200`}
+          className={`${contentStyle} border border-neutral-200 rounded-full hover:bg-neutral-100 px-8 md:px-12 py-2 dark:bg-neutral-700 dark:border-none`}
         >
           프로젝트 목록으로
         </Link>
