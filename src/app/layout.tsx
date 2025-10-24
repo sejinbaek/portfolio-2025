@@ -9,7 +9,7 @@ import { Toaster } from "sonner";
 const pretendard = localFont({
   src: "../assets/fonts/PretendardVariable.woff2",
   display: "swap",
-  adjustFontFallback: "Times New Roman",
+  adjustFontFallback: "Arial",
   fallback: [
     "Apple SD Gothic Neo",
     "Malgun Gothic",
