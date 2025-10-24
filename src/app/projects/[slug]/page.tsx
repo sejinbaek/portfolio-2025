@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import type { Project, GroupedStackItem } from "../_data/projects";
+import type { Project, GroupedStackItem } from "../_types/types.ts";
 import { projects } from "../_data/projects";
 import InsightSections from "../components/InsightSections";
 import { projectMetadata, pageMetadata } from "../../../lib/seo";

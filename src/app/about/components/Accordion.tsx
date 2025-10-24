@@ -1,6 +1,6 @@
 "use client";
 import { useId, useState } from "react";
-import { AccordionData } from "../../config/site";
+import { AccordionData } from "../_types/types";
 import clsx from "clsx";
 
 export default function Accordion({

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SkillBadgeProps } from "../../config/site";
+import { SkillBadgeProps } from "../_types/types";
 
 export default function SkillBadge({
   label,
