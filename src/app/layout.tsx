@@ -16,7 +16,6 @@ const pretendard = localFont({
     "Noto Sans KR",
     "Segoe UI",
     "Helvetica",
-    "Arial",
     "sans-serif",
   ],
   weight: "45 920",
