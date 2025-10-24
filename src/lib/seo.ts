@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { Project } from "@/app/projects/_data/projects";
+import type { Project } from "../app/projects/_types/types";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -30,7 +30,7 @@ export function pageMetadata({
   type?: "website" | "article";
 }): Metadata {
   const url = toAbs(path);
-  const ogImage = toAbs(image || "/og/default-og.png");
+  const ogImage = toAbs(image || "/og/default.webp");
   return {
     title, // layout의 template에 들어감
     description,
