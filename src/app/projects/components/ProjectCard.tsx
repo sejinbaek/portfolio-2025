@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Project } from "../data/project";
+import { Project } from "../_data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const { slug, cover, title, subtitle, description } = project;

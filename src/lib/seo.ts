@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { Project } from "@/app/projects/data/project";
+import type { Project } from "@/app/projects/_data/projects";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||

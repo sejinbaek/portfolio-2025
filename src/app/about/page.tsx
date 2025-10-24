@@ -1,17 +1,18 @@
 import Image from "next/image";
-import { contact, skills, aboutSections } from "../config/site";
+import { pageMetadata } from "../../lib/seo";
+import { contact } from "../config/site";
+import { skills, aboutSections } from "./_data/about";
 import SectionHeader from "../../components/SectionHeader";
 import LinkButton from "./components/LinkButton";
 import SkillBadge from "./components/SkillBadge";
 import Accordion from "./components/Accordion";
-import { pageMetadata } from "../../lib/seo";
 
 export const generateMetadata = () =>
   pageMetadata({
     title: "About",
-    description: "진행한 프로젝트 모음",
+    description: "백세진 소개 페이지",
     path: "/about",
-    image: "/og/about-og.png",
+    image: "/og/about.webp",
     type: "website",
   });
 

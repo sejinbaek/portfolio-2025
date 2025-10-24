@@ -1,6 +1,6 @@
 import SectionHeader from "../../components/SectionHeader";
 import ProjectList from "./components/ProjectList";
-import { projects } from "../projects/data/project";
+import { projects } from "./_data/projects";
 import { pageMetadata } from "../../lib/seo";
 
 export const generateMetadata = () =>
@@ -8,7 +8,7 @@ export const generateMetadata = () =>
     title: "Projects",
     description: "진행한 프로젝트 모음",
     path: "/projects",
-    image: "/og/projects-og.png",
+    image: "/og/projects.webp",
     type: "website",
   });
 

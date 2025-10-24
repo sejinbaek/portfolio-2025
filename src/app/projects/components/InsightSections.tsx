@@ -1,5 +1,5 @@
 import React from "react";
-import type { InsightSectionData, Paragraph, Inline } from "../data/project";
+import type { InsightSectionData, Paragraph, Inline } from "../_data/projects";
 
 const InlineNode = (n: Inline) => {
   if (typeof n === "string") return <>{n}</>;
