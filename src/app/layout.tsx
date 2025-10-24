@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "BAEK SEJIN",
     images: ["/og/default.webp"],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: { card: "summary_large_image", images: ["/og/default.webp"] },
   robots: { index: true, follow: true },
 };
 
