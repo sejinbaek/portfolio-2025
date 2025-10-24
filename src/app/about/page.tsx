@@ -12,7 +12,6 @@ export const generateMetadata = () =>
     title: "About",
     description: "백세진 소개 페이지",
     path: "/about",
-    image: "/og/about.webp",
     type: "website",
   });
 

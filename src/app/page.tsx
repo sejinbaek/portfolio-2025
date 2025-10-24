@@ -1,18 +1,8 @@
 import dynamic from "next/dynamic";
 import HeroSection from "../components/HeroSection";
-import { pageMetadata } from "../lib/seo";
 
 const AboutPage = dynamic(() => import("./about/page"));
 const ContactPage = dynamic(() => import("./contact/page"));
-
-export const generateMetadata = () =>
-  pageMetadata({
-    title: "Home",
-    description: "홈",
-    path: "/",
-    image: "/og/thumbnail.webp",
-    type: "website",
-  });
 
 export default function HomePage() {
   return (

@@ -8,7 +8,6 @@ export const generateMetadata = () =>
     title: "Projects",
     description: "진행한 프로젝트 모음",
     path: "/projects",
-    image: "/og/projects.webp",
     type: "website",
   });
 

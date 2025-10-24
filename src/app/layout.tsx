@@ -39,6 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "BAEK SEJIN",
+    images: ["/og/default.webp"],
   },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },

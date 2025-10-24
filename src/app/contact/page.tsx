@@ -9,7 +9,6 @@ export const generateMetadata = () =>
     title: "Contact",
     description: "연락하기",
     path: "/contact",
-    image: "/og/contact.webp",
     type: "website",
   });
 
