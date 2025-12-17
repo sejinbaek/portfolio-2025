@@ -5,6 +5,7 @@ import RouteMargin from "../components/RouteMargin";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Toaster } from "sonner";
+import Script from "next/script";
 
 const pretendard = localFont({
   src: "../assets/fonts/PretendardVariable.woff2",
@@ -51,6 +52,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={pretendard.variable}>
+      <head>
+        {/*  GA4 */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZZY0C2ZG54"
+        ></Script>
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZZY0C2ZG54');
+          `}
+        </Script>
+      </head>
       <body className={pretendard.className}>
         <Header />
         <main id="main-content" tabIndex={-1}>
