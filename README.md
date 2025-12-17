@@ -11,7 +11,7 @@
 
 
 ## 📹 시연 영상
-https://github.com/user-attachments/assets/c48e016e-726d-47bb-8c66-b62804a567ed
+
 
 
 ## 🧭 페이지 플로우
