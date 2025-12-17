@@ -39,15 +39,15 @@ https://github.com/user-attachments/assets/c3adbd2f-b8db-4e89-a2f7-d489845d596f
 
 ## ⭐ 구현 포인트
 
-### 공통 레이아웃 설계
+### 1️⃣ 공통 레이아웃 설계
 - App Router의 `layout.tsx`를 활용해 Header / Footer를 공통 관리
 - 페이지 전환 시 레이아웃 재사용으로 UX 일관성 유지
 
-### 애널리틱스(GA4) 연동
+### 2️⃣ 애널리틱스(GA4) 연동
 - Next.js 환경에서 SSR 이슈를 고려해 `next/script`로 GA4 스크립트 로드
 - `afterInteractive` 전략을 사용해 초기 렌더링 성능 저하 방지
 
-### 사용자 피드백 UI
+### 3️⃣ 사용자 피드백 UI
 - sonner를 활용해 폼 전송 성공/실패 시 즉각적인 피드백 제공
 - 로딩 상태는 spinner로 명확히 표현
 
