@@ -4,14 +4,17 @@
 - 배포 사이트: [https://react-blog-frontend-ev4g.vercel.app/](https://baeksejin-portfolio-2025.vercel.app/)
 
 
+
 ## 📌 프로젝트 소개
 
 - *Next.js(App Router)를 기반으로 제작한 개인 포트폴리오 웹사이트입니다.*
 - *프론트엔드 개발자로서의 기본기와 함께, 공통 레이아웃 설계, 사용자 경험, 성능 최적화, 애널리틱스 연동까지 실무에서 요구되는 전반적인 흐름을 경험하는 것을 목표로 개발했습니다.*
 
 
+
 ## 📹 시연 영상
 https://github.com/user-attachments/assets/c3adbd2f-b8db-4e89-a2f7-d489845d596f
+
 
 
 ## 🧭 페이지 플로우
@@ -24,12 +27,14 @@ https://github.com/user-attachments/assets/c3adbd2f-b8db-4e89-a2f7-d489845d596f
 ✅ **Contact**: 문의 및 연락을 위한 폼 페이지
 
 
+
 ## 🌻 UX 설계 의도
 - Home 페이지에서 주요 정보를 요약 제공해 사용자가 빠르게 전체 구조를 파악할 수 있도록 구성했습니다.
   
 - 각 섹션(About, Projects, Contact)은 독립적인 페이지로도 접근 가능하도록 설계해 탐색 흐름의 유연성을 확보했습니다.
   
 - 스크롤 기반 탐색과 라우트 이동 방식 모두를 지원해 사용자 상황에 맞는 접근이 가능하도록 했습니다.
+
 
 
 ## ⭐ 구현 포인트
@@ -47,6 +52,7 @@ https://github.com/user-attachments/assets/c3adbd2f-b8db-4e89-a2f7-d489845d596f
 - 로딩 상태는 spinner로 명확히 표현
 
 
+
 ## 🛠 기술 스택
 
 - Framework: **Next.js (App Router)**
@@ -58,6 +64,7 @@ https://github.com/user-attachments/assets/c3adbd2f-b8db-4e89-a2f7-d489845d596f
 - Analytics: **Google Analytics 4**
 - Tooling: **ESLint, Prettier**
 - Deployment: **Vercel**
+
 
 
 ## 📁 폴더구조
@@ -93,6 +100,7 @@ https://github.com/user-attachments/assets/c3adbd2f-b8db-4e89-a2f7-d489845d596f
 ```
 
 
+
 ## 🔥 폴더 구조 설계 의도
 
 - App Router를 기준으로 페이지 단위 라우팅을 명확히 분리
@@ -104,9 +112,13 @@ https://github.com/user-attachments/assets/c3adbd2f-b8db-4e89-a2f7-d489845d596f
 - 전역 스타일과 폰트는 `globals.css`와 `assets`에서 관리해스타일 충돌 최소화
 
 
+
 ## 💬 회고
 
 - App Router 구조에 대한 이해도가 크게 향상되었습니다.
+  
 - 단순 구현이 아닌, 구조와 유지보수를 고려한 설계의 중요성을 느꼈습니다.
+  
 - 피드백을 반영해 페이지 플로우와 정보 구조를 개선하며 사용자 경험을 한 단계 발전시킬 수 있었습니다.
+  
 - 사용자 행동을 측정하는 애널리틱스 관점의 프론트엔드 개발을 경험했습니다.
