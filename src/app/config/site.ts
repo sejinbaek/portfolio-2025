@@ -37,7 +37,7 @@ export const contact = {
     },
   ] satisfies Social[],
   resume: {
-    href: "/baek-sejin.pdf",
+    href: "/résumé_baeksejin.pdf",
     label: "이력서 보러가기",
   },
 };
