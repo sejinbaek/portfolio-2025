@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #262626;
+  --header-h: 64px;
 }
 
 html {
@@ -20,6 +21,18 @@ html {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-h: 60px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --header-h: 60px;
   }
 }
 

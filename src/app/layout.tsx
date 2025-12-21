@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import RouteMargin from "../components/RouteMargin";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Toaster } from "sonner";
@@ -70,7 +69,7 @@ export default function RootLayout({
       <body className={pretendard.className}>
         <Header />
         <main id="main-content" tabIndex={-1}>
-          <RouteMargin>{children}</RouteMargin>
+          {children}
         </main>
         <Footer />
         <Toaster position="top-center" />

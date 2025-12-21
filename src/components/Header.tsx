@@ -23,30 +23,30 @@ export default function Header() {
   const withoutContact = nav.header.filter((item) => item.label !== "Contact");
 
   return (
-    <header className="sticky w-full top-0 z-40 overflow-hidden">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-neutral-200 h-[var(--header-h)]">
       <div
         className={clsx(
-          "relative flex items-center justify-between border-b border-neutral-200 bg-white",
-          "pl-4 pr-2 pt-2 pb-1 md:pl-2 md:pr-4 md:pt-3 md:pb-2 xl:pl-10 xl:pr-12 xl:pt-2 xl:pb-1"
+          "mx-auto flex h-full max-w-screen-xl items-center justify-between",
+          "px-4 xl:px-2"
         )}
       >
         {/* 로고 */}
         <Link
           href="/"
           replace
-          className="font-semibold text-base md:text-xl tracking-wide text-neutral-800 md:p-2"
+          className="font-semibold text-base md:text-xl tracking-wide text-neutral-800"
         >
           SEJIN BAEK
         </Link>
 
-        {/* 데스크톱 네비게이션 */}
+        {/* 데스크톱 네비 */}
         <nav className="hidden md:flex items-center gap-4">
           {withoutContact.map((item) => (
             <Link
               key={item.label}
               href={item.href}
               replace
-              className="text-sm md:text-base md:px-3 md:py-1 xl:px-4 xl:py-2 rounded-full text-neutral-800 hover:bg-neutral-100"
+              className="text-sm md:text-base px-3 py-1 rounded-full text-neutral-800 hover:bg-neutral-100"
             >
               {item.label}
             </Link>
@@ -65,11 +65,7 @@ export default function Header() {
           type="button"
           onClick={() => setOpen(true)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-neutral-100 text-neutral-800"
-          aria-controls={menuId}
-          aria-expanded={open}
-          aria-label="메뉴 열기"
         >
-          {/* 햄버거 아이콘 */}
           <svg width="22" height="22" viewBox="0 0 24 24">
             <path
               d="M4 7h16M4 12h16M4 17h16"
