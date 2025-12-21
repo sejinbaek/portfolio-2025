@@ -35,7 +35,7 @@ export default function HeroSectionV2() {
   const mainTextStyle = clsx(
     "relative z-10 text-center",
     "text-6xl min-[390px]:text-7xl sm:text-8xl md:text-9xl lg:text-[150px] xl:text-[230px]",
-    "text-white/80"
+    "text-white/90"
   );
 
   return (
@@ -43,17 +43,8 @@ export default function HeroSectionV2() {
       className="relative overflow-hidden w-full h-[calc(100svh-var(--header-h))]"
       aria-labelledby="hero-title"
     >
-      {/* ✅ background-image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/hero/hero-bg.webp"
-          alt=""
-          fill
-          sizes="100vw"
-          priority
-          className="object-cover object-center"
-        />
-      </div>
+      {/* ✅ background-color */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#434343] to-black" />
 
       {/* ✅ 콘텐츠는 위로 */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center space-y-12 md:space-y-24">
