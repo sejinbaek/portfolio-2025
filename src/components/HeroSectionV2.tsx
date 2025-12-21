@@ -49,6 +49,7 @@ export default function HeroSectionV2() {
           src="/hero/hero-bg.webp"
           alt=""
           fill
+          sizes="100vw"
           priority
           className="object-cover object-center"
         />
