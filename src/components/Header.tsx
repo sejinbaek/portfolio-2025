@@ -118,7 +118,7 @@ export default function Header() {
             </button>
           </div>
 
-          <ul className="flex flex-col items-center gap-10 py-10 text-base tracking-wide text-neutral-800">
+          <ul className="font-shrikhand flex flex-col items-center gap-10 py-10 text-xl tracking-wide text-neutral-800">
             {nav.header.map((item) => (
               <li key={item.label}>
                 <Link
