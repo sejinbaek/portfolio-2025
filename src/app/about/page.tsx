@@ -95,7 +95,7 @@ export default function AboutPage() {
               <h2 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
                 Links
               </h2>
-              <div className="grid grid-cols-2 gap-2 lg:flex lg:gap-4">
+              <div className="w-full flex flex-col gap-2 md:gap-4 lg:flex-row lg:gap-4 xl:flex-row">
                 {contact.resume && (
                   <LinkButton href={contact.resume.href} download>
                     {contact.resume.label ?? "이력서 보러가기"}
