@@ -1,26 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { pretendard, paperlogy, shrikhand } from "./styles/font";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Toaster } from "sonner";
 import Script from "next/script";
-
-const pretendard = localFont({
-  src: "../assets/fonts/PretendardVariable.woff2",
-  display: "swap",
-  adjustFontFallback: "Arial",
-  fallback: [
-    "Apple SD Gothic Neo",
-    "Malgun Gothic",
-    "Noto Sans KR",
-    "Segoe UI",
-    "Helvetica",
-    "sans-serif",
-  ],
-  weight: "45 920",
-  variable: "--font-pretendard",
-});
 
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -50,7 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={pretendard.variable}>
+    <html
+      lang="ko"
+      className={`${pretendard.variable} ${paperlogy.variable} ${shrikhand.variable}`}
+    >
       <head>
         {/*  GA4 */}
         <Script

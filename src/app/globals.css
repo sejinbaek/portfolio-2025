@@ -62,4 +62,11 @@ body {
   .text-stroke {
     -webkit-text-stroke: 1px theme("colors.neutral.800");
   }
+  .font-shrikhand {
+    font-family: var(--font-shrikhand);
+  }
+
+  .font-paperlogy {
+    font-family: var(--font-paperlogy);
+  }
 }

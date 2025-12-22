@@ -1,29 +1,5 @@
-import Image from "next/image";
-import { Shrikhand } from "next/font/google";
-import localFont from "next/font/local";
 import clsx from "clsx";
-
-const shrikhand = Shrikhand({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const paperlogy = localFont({
-  src: "../assets/fonts/Paperlogy-5Medium.ttf",
-  display: "swap",
-  adjustFontFallback: "Arial",
-  fallback: [
-    "Apple SD Gothic Neo",
-    "Malgun Gothic",
-    "Noto Sans KR",
-    "Segoe UI",
-    "Helvetica",
-    "sans-serif",
-  ],
-  weight: "45 920",
-  variable: "--font-paperlogy",
-});
+import { shrikhand } from "../app/styles/font";
 
 export default function HeroSectionV2() {
   const subTextStyle = clsx(
@@ -48,14 +24,12 @@ export default function HeroSectionV2() {
 
       {/* ✅ 콘텐츠는 위로 */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center space-y-12 md:space-y-24">
-        <p id="hero-title" className={clsx(paperlogy.className, subTextStyle)}>
+        <p id="hero-title" className={clsx("font-paperlogy", subTextStyle)}>
           [ BAEK SEJIN - 2025 ]
         </p>
 
         <h1 className={clsx(shrikhand.className, mainTextStyle)}>portfolio</h1>
-        <p
-          className={clsx(paperlogy.className, subTextStyle, "leading-relaxed")}
-        >
+        <p className={clsx("font-paperlogy", subTextStyle, "leading-relaxed")}>
           Web Publisher, <br className="lg:hidden" /> Frontend Developer
         </p>
       </div>

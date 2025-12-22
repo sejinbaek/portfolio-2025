@@ -47,10 +47,10 @@ export default function AboutPage() {
           </div>
           <SectionHeader
             title="ABOUT"
-            className="[&>p]:leading-6 md:[&>p]:leading-9 lg:[&>p]:leading-12"
+            className="[&>p]:leading-7 md:[&>p]:leading-9 lg:[&>p]:leading-12"
             subtitle={
               <>
-                안녕하세요, <br className="block md:hidden" />
+                안녕하세요, 웹 퍼블리셔이자 <br className="block md:hidden" />
                 프론트엔드 개발자 백세진입니다.
                 <br />
                 저는 작은 디테일 속에서 특별한 경험을{" "}
