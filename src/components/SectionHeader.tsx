@@ -24,7 +24,7 @@ const SectionHeader = ({
     >
       <span
         className={[
-          "font-shrikhand inline-block px-5 text-2xl font-extrabold leading-none min-[400px]:text-3xl md:text-4xl lg:text-6xl",
+          "font-shrikhand inline-block px-5 pt-1 text-2xl font-extrabold leading-none min-[400px]:text-3xl md:text-4xl lg:text-6xl",
           isCenter ? "bg-neutral-200" : "bg-transparent",
         ].join(" ")}
         style={{ color: titleColor }}
