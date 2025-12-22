@@ -34,7 +34,7 @@ export default function Header() {
         <Link
           href="/"
           replace
-          className="font-semibold text-base md:text-xl tracking-wide text-neutral-800"
+          className="font-shrikhand text-base md:text-xl lg:text-2xl lg:pt-1 tracking-wide text-neutral-800"
         >
           SEJIN BAEK
         </Link>
