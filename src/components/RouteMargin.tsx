@@ -14,7 +14,7 @@ export default function RouteMargin({
   return (
     <div
       className={clsx(
-        "mx-auto w-full max-w-screen-xl px-5 md:px-10 min-h-dvh",
+        "mx-auto w-full max-w-screen-xl px-5 min-h-dvh",
         isHome ? "mb-20 mt-2" : "my-20 lg:my-40"
       )}
     >
