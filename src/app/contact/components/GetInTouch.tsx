@@ -19,7 +19,7 @@ export default function GetInTouch({
     <section
       className={`flex flex-col items-center text-center gap-4 md:gap-8 lg:gap-10 ${className}`}
     >
-      <h3 className="text-xl font-semibold min-[400px]:text-2xl md:text-3xl lg:text-4xl">
+      <h3 className="font-shrikhand text-xl font-semibold min-[400px]:text-2xl md:text-3xl lg:text-4xl">
         {title}
       </h3>
 

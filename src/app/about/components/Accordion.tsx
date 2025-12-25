@@ -40,7 +40,7 @@ export default function Accordion({
             )}
           >
             {/* Experience */}
-            <h3>
+            <h5>
               <button
                 id={btnId}
                 aria-controls={panelId}
@@ -85,7 +85,7 @@ export default function Accordion({
                   </svg>
                 )}
               </button>
-            </h3>
+            </h5>
 
             <div
               id={panelId}

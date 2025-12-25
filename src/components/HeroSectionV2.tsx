@@ -24,14 +24,16 @@ export default function HeroSectionV2() {
 
       {/* ✅ 콘텐츠는 위로 */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center space-y-12 md:space-y-24">
-        <p id="hero-title" className={clsx("font-paperlogy", subTextStyle)}>
+        <span id="hero-title" className={clsx("font-paperlogy", subTextStyle)}>
           [ BAEK SEJIN - 2025 ]
-        </p>
+        </span>
 
         <h1 className={clsx(shrikhand.className, mainTextStyle)}>portfolio</h1>
-        <p className={clsx("font-paperlogy", subTextStyle, "leading-relaxed")}>
+        <span
+          className={clsx("font-paperlogy", subTextStyle, "leading-relaxed")}
+        >
           Web Publisher, <br className="lg:hidden" /> Frontend Developer
-        </p>
+        </span>
       </div>
     </section>
   );

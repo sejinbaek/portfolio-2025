@@ -22,7 +22,7 @@ const SectionHeader = ({
     <div
       className={`flex flex-col gap-4 min-[400px]:gap-6 lg:gap-8 ${alignCls} ${className}`}
     >
-      <span
+      <h2
         className={[
           "font-shrikhand inline-block px-5 pt-1 text-2xl font-extrabold leading-none min-[400px]:text-3xl md:text-4xl lg:text-6xl",
           isCenter ? "bg-neutral-200" : "bg-transparent",
@@ -30,7 +30,7 @@ const SectionHeader = ({
         style={{ color: titleColor }}
       >
         {title}
-      </span>
+      </h2>
 
       {subtitle && (
         <p className="max-w-prose text-base leading-7 text-neutral-800 whitespace-pre-line min-[400px]:text-lg md:text-xl lg:text-2xl md:leading-8 lg:leading-9 dark:text-white">

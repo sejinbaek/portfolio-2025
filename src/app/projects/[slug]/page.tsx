@@ -95,9 +95,9 @@ export default async function ProjectPage({
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-1 text-base md:text-lg xl:text-xl text-neutral-400 dark:text-neutral-300">
+            <h2 className="mt-1 text-base md:text-lg xl:text-xl text-neutral-400 dark:text-neutral-300">
               {subtitle}
-            </p>
+            </h2>
           )}
         </header>
 
@@ -107,7 +107,7 @@ export default async function ProjectPage({
           <section className="space-y-4 order-2 lg:order-1 prose prose-neutral">
             {about && (
               <div className="flex flex-col gap-2">
-                <h2 className={subTitleStyle}>About the Service</h2>
+                <h3 className={subTitleStyle}>About the Service</h3>
                 <p className={contentStyle}>{about}</p>
               </div>
             )}
@@ -124,7 +124,7 @@ export default async function ProjectPage({
             )}
             {implementation && implementation.length > 0 && (
               <div className="flex flex-col gap-2 mt-8">
-                <h3 className={subTitleStyle}>Frontend Implementation</h3>
+                <h4 className={subTitleStyle}>Frontend Implementation</h4>
                 <ul className="space-y-4">
                   {implementation.map((line, i) => (
                     <li key={i} className={contentStyle}>
@@ -140,25 +140,25 @@ export default async function ProjectPage({
           <section className="order-1 lg:order-2 flex flex-col gap-4 lg:gap-8 mb-6 text-neutral-700 lg:sticky lg:top-20 lg:pl-20 xl:pl-40">
             {period && (
               <div>
-                <h4 className={subTitleStyle}>Date</h4>
+                <span className={subTitleStyle}>Date</span>
                 <p className={contentStyle}>{period}</p>
               </div>
             )}
             {team && (
               <div>
-                <h4 className={subTitleStyle}>Team</h4>
+                <span className={subTitleStyle}>Team</span>
                 <p className={contentStyle}>{team}</p>
               </div>
             )}
             {role && (
               <div>
-                <h4 className={subTitleStyle}>Role</h4>
+                <span className={subTitleStyle}>Role</span>
                 <p className={contentStyle}>{role}</p>
               </div>
             )}
             {Array.isArray(stack) && stack.length > 0 && (
               <div>
-                <h4 className={subTitleStyle}>Stack</h4>
+                <span className={subTitleStyle}>Stack</span>
 
                 {isFlatStack(stack) ? (
                   <p className={contentStyle}>{stack.join(" · ")}</p>

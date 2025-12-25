@@ -36,7 +36,7 @@ export default function Header() {
           replace
           className="font-shrikhand text-base md:text-xl lg:text-2xl lg:pt-1 tracking-wide text-neutral-800"
         >
-          SEJIN BAEK
+          <h1>SEJIN BAEK</h1>
         </Link>
 
         {/* 데스크톱 네비 */}
