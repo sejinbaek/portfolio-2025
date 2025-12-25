@@ -6,7 +6,7 @@ export const projects: Record<string, Project> = {
     slug: "jobthoughts",
     cover: {
       src: "/projects/jobthoughts/jobthoughts-cover.webp",
-      alt: "잡생각 프로젝트 커버 이미지",
+      alt: "잡생각 프로젝트 썸네일",
     },
     title: "JobThoughts",
     subtitle: "성향을 분석해 맞춤형 직업을 추천하는 서비스",
@@ -86,7 +86,7 @@ export const projects: Record<string, Project> = {
     slug: "umate",
     cover: {
       src: "/projects/umate/u_mate-cover-2.webp",
-      alt: "유메이트 커버 이미지",
+      alt: "유메이트 썸네일",
     },
     title: "U: mate",
     subtitle: "AI 챗봇 기반 통신사 요금제 추천 서비스",
@@ -249,7 +249,7 @@ export const projects: Record<string, Project> = {
     slug: "itplace",
     cover: {
       src: "/projects/itplace/it_place-cover.webp",
-      alt: "잇플레이스 커버 이미지",
+      alt: "잇플레이스 썸네일",
     },
     title: "It:place",
     subtitle: "전국 제휴처를 잇는 통신사 멤버십 지도 서비스",
