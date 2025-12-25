@@ -47,7 +47,7 @@ export default function Accordion({
                 aria-expanded={isOpen}
                 onClick={() => setOpen(isOpen ? null : i)}
                 className={clsx(
-                  "flex w-full items-center justify-between px-5 py-4 md:px-7 md:py-6 lg:px-9 lg:py-8 text-left font-bold text-base min-[400px]:text-xl md:text-2xl lg:text-3xl",
+                  "font-shrikhand flex w-full items-center justify-between px-5 py-4 md:px-7 md:py-6 lg:px-9 lg:py-8 text-left font-bold text-base min-[400px]:text-xl md:text-2xl lg:text-3xl",
                   !isOpen &&
                     "focus-visible:ring-2 focus-visible:ring-sky-400 rounded-md"
                 )}

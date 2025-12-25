@@ -92,7 +92,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col items-center gap-8 lg:gap-14">
             <div className="flex flex-col items-center lg:items-start w-full gap-4 lg:gap-6">
-              <h3 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
+              <h3 className="font-shrikhand text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
                 Links
               </h3>
               <div className="w-full flex flex-col gap-2 md:gap-4 lg:flex-row lg:gap-4 xl:flex-row">
@@ -110,7 +110,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex flex-col items-center lg:items-start gap-4 lg:gap-6">
-              <h4 className="text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
+              <h4 className="font-shrikhand text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
                 My Skills
               </h4>
               <div className="flex flex-wrap justify-center md:px-10 lg:px-0 lg:justify-start gap-2 lg:gap-3">
