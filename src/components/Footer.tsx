@@ -13,19 +13,19 @@ export default function Footer() {
                  animate-[marquee_linear_infinite] [animation-duration:35s]"
             >
               {/* 같은 문구를 2번 이어붙여야 끊김 없이 순환 */}
-              <h2 className="min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4">
+              <p className="font-shrikhand min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4">
                 <span className="opacity-70">Keep </span> Learning,{" "}
                 <span className="opacity-70">Keep </span> Growing,{" "}
                 <span className="opacity-70">Keep </span> Creating.
-              </h2>
-              <h2
+              </p>
+              <p
                 aria-hidden
-                className="min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4"
+                className="font-shrikhand min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4"
               >
                 <span className="opacity-70">Keep </span> Learning,{" "}
                 <span className="opacity-70">Keep </span> Growing,{" "}
                 <span className="opacity-70">Keep </span> Creating.
-              </h2>
+              </p>
             </div>
           </div>
           <div className="overflow-hidden">
@@ -33,15 +33,15 @@ export default function Footer() {
               className="marquee-anim flex w-max whitespace-nowrap gap-0 will-change-transform
                     animate-[marquee_linear_infinite_reverse] [animation-duration:35s]"
             >
-              <h2 className="min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4">
+              <p className="font-shrikhand min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4">
                 Portfolio of Baek Sejin — Creative Frontend Developer
-              </h2>
-              <h2
+              </p>
+              <p
                 aria-hidden
-                className="min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4"
+                className="font-shrikhand min-w-[50%] text-xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white pr-2 lg:pr-4"
               >
                 Portfolio of Baek Sejin — Creative Frontend Developer
-              </h2>
+              </p>
             </div>
           </div>
         </div>
