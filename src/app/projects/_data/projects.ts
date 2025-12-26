@@ -80,6 +80,10 @@ export const projects: Record<string, Project> = {
         src: "/projects/jobthoughts/jobthoughts-3.webp",
         alt: "잡생각 프로젝트 이미지 3",
       },
+      {
+        src: "/projects/jobthoughts/jobthoughts-4.webp",
+        alt: "잡생각 프로젝트 이미지 4",
+      },
     ],
   },
   umate: {
