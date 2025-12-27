@@ -20,7 +20,7 @@ export const aboutSections: AccordionData[] = [
     label: "Experience",
     rows: [
       {
-        text: "해커스 블로그 리포터 해블리 12기",
+        text: "해커스 블로그 리포터 해블리 12기 서포터즈",
         period: "2025. 11 ~ 2025. 12",
       },
       {
