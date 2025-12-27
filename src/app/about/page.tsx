@@ -31,10 +31,10 @@ export default function AboutPage() {
   const subTitleStyle = "font-shrikhand text-xl md:text-2xl xl:text-3xl";
 
   const topImageSize =
-    "w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-32 lg:h-32";
+    "w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-40 lg:h-40";
 
   const bottomImageSize =
-    "w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36 lg:w-48 lg:h-48";
+    "w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36 lg:w-56 lg:h-56";
 
   return (
     <RouteMargin>
