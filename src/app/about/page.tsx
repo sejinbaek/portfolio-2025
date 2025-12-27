@@ -30,6 +30,12 @@ export default function AboutPage() {
 
   const subTitleStyle = "font-shrikhand text-xl md:text-2xl xl:text-3xl";
 
+  const topImageSize =
+    "w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-32 lg:h-32";
+
+  const bottomImageSize =
+    "w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36 lg:w-48 lg:h-48";
+
   return (
     <RouteMargin>
       <section className="flex flex-col md:gap-14 lg:gap-16 mx-auto w-full">
@@ -37,14 +43,14 @@ export default function AboutPage() {
           {/* 상단 장식 */}
           <div
             aria-hidden
-            className="hidden min-[350px]:block pointer-events-none absolute inset-x-0 top-0 -translate-y-1/2 rotate-180 px-4 md:px-14 lg:px-32 dark:invert dark:brightness-100"
+            className="hidden min-[350px]:block pointer-events-none absolute inset-x-0 top-0 -translate-y-1/2 rotate-180 px-4 sm:px-16 md:px-14 lg:px-24 dark:invert dark:brightness-100"
           >
             <Image
-              src="/about/about-decor.webp"
+              src="/about/about-decor-top.svg"
               alt=""
               width={50}
               height={50}
-              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-28 lg:h-28"
+              className={topImageSize}
             />
           </div>
           <SectionHeader
@@ -71,14 +77,14 @@ export default function AboutPage() {
           {/* 하단 장식 */}
           <div
             aria-hidden
-            className="hidden min-[350px]:block pointer-events-none absolute inset-x-0 bottom-0 translate-y-1/2 px-4 md:px-14 lg:px-32 dark:invert dark:brightness-100"
+            className="hidden min-[350px]:block pointer-events-none absolute inset-x-0 bottom-[-10px] translate-y-1/2 md:bottom-[-20px] sm:px-16 md:px-8 lg:px-20 dark:invert dark:brightness-100"
           >
             <Image
-              src="/about/about-decor-top-2.png"
+              src="/about/about-decor-bottom.svg"
               alt=""
               width={50}
               height={50}
-              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-48 lg:h-48"
+              className={bottomImageSize}
             />
           </div>
         </div>
