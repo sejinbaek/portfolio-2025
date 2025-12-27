@@ -28,6 +28,8 @@ export default function AboutPage() {
     (social) => social.name !== "youtube"
   );
 
+  const subTitleStyle = "font-shrikhand text-xl md:text-2xl xl:text-3xl";
+
   return (
     <RouteMargin>
       <section className="flex flex-col md:gap-14 lg:gap-16 mx-auto w-full">
@@ -35,14 +37,14 @@ export default function AboutPage() {
           {/* 상단 장식 */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-x-0 top-0 -translate-y-1/2 rotate-180 px-2 md:px-10 lg:px-32 dark:invert dark:brightness-100"
+            className="hidden min-[350px]:block pointer-events-none absolute inset-x-0 top-0 -translate-y-1/2 rotate-180 px-4 md:px-14 lg:px-32 dark:invert dark:brightness-100"
           >
             <Image
-              src="../about/about-decor.svg"
+              src="/about/about-decor.webp"
               alt=""
               width={50}
               height={50}
-              className="w-12 h-12 md:w-16 md:h-16 lg:w-28 lg:h-28"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-28 lg:h-28"
             />
           </div>
           <SectionHeader
@@ -69,14 +71,14 @@ export default function AboutPage() {
           {/* 하단 장식 */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-1/2 px-2 md:px-14 lg:px-32 dark:invert dark:brightness-100"
+            className="hidden min-[350px]:block pointer-events-none absolute inset-x-0 bottom-0 translate-y-1/2 px-4 md:px-14 lg:px-32 dark:invert dark:brightness-100"
           >
             <Image
-              src="../about/about-decor.svg"
+              src="/about/about-decor-top-2.png"
               alt=""
               width={50}
               height={50}
-              className="w-12 h-12 md:w-16 md:h-16 lg:w-28 lg:h-28"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-48 lg:h-48"
             />
           </div>
         </div>
@@ -90,12 +92,10 @@ export default function AboutPage() {
               sizes="(min-width: 1024px) 672px, (min-width: 768px) 320px, 160px"
             />
           </div>
-          <div className="flex flex-col items-center gap-8 lg:gap-14">
+          <div className="flex flex-col items-center gap-14">
             <div className="flex flex-col items-center lg:items-start w-full gap-4 lg:gap-6">
-              <h3 className="font-shrikhand text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
-                Links
-              </h3>
-              <div className="w-full flex flex-col gap-2 md:gap-4 lg:flex-row lg:gap-4 xl:flex-row">
+              <h3 className={subTitleStyle}>Links</h3>
+              <div className="w-full flex flex-col gap-4 lg:flex-row lg:gap-4 xl:flex-row">
                 {contact.resume && (
                   <LinkButton href={contact.resume.href} download>
                     {contact.resume.label ?? "이력서 보러가기"}
@@ -109,10 +109,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center lg:items-start gap-4 lg:gap-6">
-              <h4 className="font-shrikhand text-base font-bold min-[400px]:text-xl md:text-2xl xl:text-3xl">
-                My Skills
-              </h4>
+            <div className="flex flex-col items-center lg:items-start gap-6">
+              <h4 className={subTitleStyle}>My Skills</h4>
               <div className="flex flex-wrap justify-center md:px-10 lg:px-0 lg:justify-start gap-2 lg:gap-3">
                 {skills.map((skill) => (
                   <SkillBadge

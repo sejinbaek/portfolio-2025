@@ -18,7 +18,7 @@ export default function LinkButton({
   rel,
 }: LinkButtonProps) {
   const base =
-    "w-full flex items-center justify-center gap-2 pt-4 pb-3 px-3 rounded-xl min-[400px]:rounded-2xl text-xs min-[400px]:text-base xl:text-xl border border-neutral-200 text-neutral-800 transform-gpu transition duration-200 ease-out md:hover:-translate-y-1 hover:bg-neutral-100 focus:bg-neutral-100 [will-change:transform] dark:bg-white";
+    "w-full flex items-center justify-center gap-2 pt-6 pb-5 px-3 rounded-xl min-[400px]:rounded-2xl text-sm min-[400px]:text-base xl:text-xl border border-neutral-200 text-neutral-800 transform-gpu transition duration-200 ease-out md:hover:-translate-y-1 hover:bg-neutral-100 focus:bg-neutral-100 [will-change:transform] dark:bg-white";
   const ArrowIcon = (
     <span
       aria-hidden="true"
