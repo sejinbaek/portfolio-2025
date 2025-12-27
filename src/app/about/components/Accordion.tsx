@@ -114,7 +114,7 @@ export default function Accordion({
                       <div
                         className={clsx(
                           "tabular-nums",
-                          "text-xs md:text-base lg:text-xl md:self-start",
+                          "text-xs sm:text-base lg:text-xl md:self-start",
                           "md:w-[14rem] md:min-w-[14rem] md:shrink-0",
                           isOpen ? "text-neutral-200" : "text-neutral-500"
                         )}
