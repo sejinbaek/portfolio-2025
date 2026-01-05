@@ -28,7 +28,7 @@ export const aboutSections: AccordionData[] = [
         period: "2025. 01 ~ 2025. 08",
       },
       {
-        text: "한국관광공사 2024 TS교통안전 서포터즈",
+        text: "한국교통공사 2024 TS교통안전 서포터즈",
         period: "2024. 07 ~ 2024. 11",
       },
       {
