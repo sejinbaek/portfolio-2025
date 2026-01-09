@@ -63,6 +63,7 @@ export default function Header() {
         {/* 모바일 햄버거 */}
         <button
           type="button"
+          aria-label="메뉴 열기"
           onClick={() => setOpen(true)}
           className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-neutral-100 text-neutral-800"
         >
