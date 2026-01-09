@@ -44,6 +44,7 @@ export default function ContactForm() {
         </label>
         <input
           id="name"
+          autoComplete="name"
           name="name"
           placeholder="Your name"
           required
@@ -55,6 +56,7 @@ export default function ContactForm() {
         </label>
         <input
           id="email"
+          autoComplete="email"
           name="email"
           type="email"
           placeholder="Email address"
