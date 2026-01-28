@@ -1,7 +1,7 @@
 # 📝 BAEKSEJIN PORTFOLIO
 
 백세진의 포트폴리오를 구경해보세요✨🤗
-- 배포 사이트: [https://react-blog-frontend-ev4g.vercel.app/](https://baeksejin-portfolio-2025.vercel.app/)
+- 배포 사이트: [https://baeksejin-portfolio-2025.vercel.app/](https://baeksejin-portfolio-2025.vercel.app/)
   
 ## 📌 프로젝트 소개
 
